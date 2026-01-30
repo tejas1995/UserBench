@@ -1,0 +1,1899 @@
+{
+    "id": "flight:2-95|apartment:2-110",
+    "scenario": "I am planning a relaxing getaway to Barcelona from April 10th to April 20th. I would love to fly out from New York on April 10th, and it's important for me to have a meal onboard as it makes the journey feel more like home. I also appreciate having a bit more personal space and privacy, so I plan to fly business class to enjoy some exclusive amenities. Upon arrival in Barcelona, I will be staying in an apartment from April 10th to April 20th. I envision spending my evenings having a little barbecue in a garden right at my apartment, which seems like the perfect way to unwind. Additionally, I love to catch up on a good book in the comfort of my room, so I would appreciate the option to check out late on April 20th to savor the last moments of my trip.",
+    "category": "travel_planning",
+    "dimensions": [
+        "apartment",
+        "flight"
+    ],
+    "wanted_num": [
+        2,
+        2
+    ],
+    "initial_desc": "I am planning a trip to Barcelona, flying one-way from New York on April 10th, and staying in an apartment in Barcelona from April 10th to April 20th.",
+    "preferences": {
+        "scenario": "I am planning a relaxing getaway to Barcelona from April 10th to April 20th. I would love to fly out from New York on April 10th, and it's important for me to have a meal onboard as it makes the journey feel more like home. I also appreciate having a bit more personal space and privacy, so I plan to fly business class to enjoy some exclusive amenities. Upon arrival in Barcelona, I will be staying in an apartment from April 10th to April 20th. I envision spending my evenings having a little barbecue in a garden right at my apartment, which seems like the perfect way to unwind. Additionally, I love to catch up on a good book in the comfort of my room, so I would appreciate the option to check out late on April 20th to savor the last moments of my trip.",
+        "wanted_num": [
+            2,
+            2
+        ],
+        "difficulty": "easy",
+        "dimensions": [
+            "apartment",
+            "flight"
+        ],
+        "apartment": {
+            "preferences": [
+                [
+                    "apartment",
+                    "amenities",
+                    "prefer having garden",
+                    "Having a little barbecue in a garden right at my apartment seems like the perfect way to spend an evening during the trip.",
+                    "Correct options should have Garden available and listed in the amenities. Wrong options could be wrong against this preference by do not contain Garden in the amenity."
+                ],
+                [
+                    "apartment",
+                    "service",
+                    "prefer to checkout late",
+                    "I love to catch up on a good book in the comfort of my room and always wish I had more time before leaving. This time I may want to check out late to enjoy it more.",
+                    "Correct options should have late checkout fee listed in the service and value is not null. Wrong options could be wrong against this preference by not having late checkout fee listed or its value is null, indicating that late checkout is not available."
+                ]
+            ],
+            "arguments": {
+                "city": "Barcelona",
+                "date_start": "April 10th",
+                "date_end": "April 20th"
+            },
+            "all_ids": [
+                "A12",
+                "A19",
+                "A9",
+                "A11",
+                "A14",
+                "A15",
+                "A22",
+                "A17",
+                "A5",
+                "A6",
+                "A20",
+                "A21",
+                "A1",
+                "A4",
+                "A2",
+                "A10",
+                "A8",
+                "A3",
+                "A18",
+                "A16",
+                "A7",
+                "A13"
+            ],
+            "correct_ids": [
+                "A17",
+                "A3",
+                "A16"
+            ],
+            "wrong_ids": [
+                "A14",
+                "A1",
+                "A20",
+                "A6",
+                "A11",
+                "A13",
+                "A8",
+                "A2",
+                "A12",
+                "A21"
+            ],
+            "noise_ids": [
+                "A7",
+                "A4",
+                "A18",
+                "A5",
+                "A15",
+                "A19",
+                "A10",
+                "A22",
+                "A9"
+            ],
+            "best_id": "A17",
+            "best_id_thought": "To determine the option with the lowest cost, we need to consider the base cost of each option and add any additional costs that align with the user's preferences. The user prefers an apartment with a garden and the option to checkout late. All options have a garden, so there is no additional cost for this preference. However, there is a cost associated with late checkout for each option. \n\nLet's calculate the total cost for each option:\n\n1. **Barcelona Garden Retreat (ID: A17):**\n   - Base cost: $1800\n   - Late checkout fee: $50\n   - Total cost: $1800 + $50 = $1850\n\n2. **Luxury Oasis in Barcelona (ID: A3):**\n   - Base cost: $2500\n   - Late checkout fee: $70\n   - Total cost: $2500 + $70 = $2570\n\n3. **Charming Urban Villa (ID: A16):**\n   - Base cost: $3000\n   - Late checkout fee: $80\n   - Total cost: $3000 + $80 = $3080\n\nAfter calculating the total costs, the 'Barcelona Garden Retreat' (ID: A17) has the lowest total cost of $1850. Therefore, this option is the most cost-effective choice for the user based on their preferences.",
+            "options": {
+                "correct": [
+                    {
+                        "name": "Luxury Oasis in Barcelona",
+                        "room": "3B3B",
+                        "capacity": 6,
+                        "cost": 2500,
+                        "rating": 9,
+                        "amenities": [
+                            "Kitchen",
+                            "High-Speed WiFi",
+                            "Air Conditioning",
+                            "Parking",
+                            "Garden"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 150,
+                            "cost_late_checkout_fee": 70,
+                            "cost_early_checkin_fee": 40
+                        },
+                        "id": "A3"
+                    },
+                    {
+                        "name": "Barcelona Garden Retreat",
+                        "room": "2B2B",
+                        "capacity": 4,
+                        "cost": 1800,
+                        "rating": 9,
+                        "amenities": [
+                            "Kitchen",
+                            "Washer and Dryer",
+                            "Pets Allowed",
+                            "High-Speed WiFi",
+                            "Air Conditioning",
+                            "Parking",
+                            "Garden"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 100,
+                            "cost_late_checkout_fee": 50,
+                            "cost_early_checkin_fee": 30
+                        },
+                        "id": "A17"
+                    },
+                    {
+                        "name": "Charming Urban Villa",
+                        "room": "4B4B",
+                        "capacity": 8,
+                        "cost": 3000,
+                        "rating": 10,
+                        "amenities": [
+                            "Kitchen",
+                            "Washer and Dryer",
+                            "High-Speed WiFi",
+                            "Air Conditioning",
+                            "Parking",
+                            "Elevator",
+                            "Garden"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 200,
+                            "cost_late_checkout_fee": 80,
+                            "cost_early_checkin_fee": null
+                        },
+                        "id": "A16"
+                    }
+                ],
+                "wrong": [
+                    {
+                        "name": "Seaside Serenity",
+                        "room": "4B4B",
+                        "capacity": 10,
+                        "cost": 3000,
+                        "rating": 10,
+                        "amenities": [
+                            "Air Conditioning",
+                            "Parking",
+                            "Elevator"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 120,
+                            "cost_late_checkout_fee": 30,
+                            "cost_early_checkin_fee": 50
+                        },
+                        "id": "A8"
+                    },
+                    {
+                        "name": "Parkside Paradise",
+                        "room": "3B2B",
+                        "capacity": 5,
+                        "cost": 2100,
+                        "rating": 8,
+                        "amenities": [
+                            "Garden",
+                            "High-Speed WiFi",
+                            "Air Conditioning"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 80,
+                            "cost_late_checkout_fee": null,
+                            "cost_early_checkin_fee": null
+                        },
+                        "id": "A12"
+                    },
+                    {
+                        "name": "Modernist Marvel",
+                        "room": "3B3B",
+                        "capacity": 8,
+                        "cost": 2500,
+                        "rating": 9,
+                        "amenities": [
+                            "Pets Allowed",
+                            "Washer and Dryer",
+                            "High-Speed WiFi"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 100,
+                            "cost_late_checkout_fee": null,
+                            "cost_early_checkin_fee": null
+                        },
+                        "id": "A13"
+                    },
+                    {
+                        "name": "Sunny Barcelona Loft",
+                        "room": "1B1B",
+                        "capacity": 2,
+                        "cost": 1200,
+                        "rating": 8,
+                        "amenities": [
+                            "Air Conditioning",
+                            "Kitchen",
+                            "High-Speed WiFi",
+                            "Parking"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 50,
+                            "cost_late_checkout_fee": null,
+                            "cost_early_checkin_fee": 30
+                        },
+                        "id": "A14"
+                    },
+                    {
+                        "name": "Rooftop Rambler",
+                        "room": "2B1B",
+                        "capacity": 3,
+                        "cost": 1600,
+                        "rating": 7,
+                        "amenities": [
+                            "Elevator",
+                            "Washer and Dryer",
+                            "Kitchen"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 60,
+                            "cost_late_checkout_fee": 25,
+                            "cost_early_checkin_fee": null
+                        },
+                        "id": "A2"
+                    },
+                    {
+                        "name": "La Rambla Luxury",
+                        "room": "6B6B",
+                        "capacity": 12,
+                        "cost": 5000,
+                        "rating": 10,
+                        "amenities": [
+                            "Pets Allowed",
+                            "Parking",
+                            "Air Conditioning"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 200,
+                            "cost_late_checkout_fee": null,
+                            "cost_early_checkin_fee": null
+                        },
+                        "id": "A21"
+                    },
+                    {
+                        "name": "Gothic Quarter Studio",
+                        "room": "1B1B",
+                        "capacity": 2,
+                        "cost": 1100,
+                        "rating": 6,
+                        "amenities": [
+                            "Kitchen",
+                            "Air Conditioning",
+                            "High-Speed WiFi"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 40,
+                            "cost_late_checkout_fee": 25,
+                            "cost_early_checkin_fee": null
+                        },
+                        "id": "A6"
+                    },
+                    {
+                        "name": "Rambla's Retreat",
+                        "room": "2B1B",
+                        "capacity": 4,
+                        "cost": 1700,
+                        "rating": 8,
+                        "amenities": [
+                            "Parking",
+                            "Elevator",
+                            "Kitchen"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 60,
+                            "cost_late_checkout_fee": 40,
+                            "cost_early_checkin_fee": null
+                        },
+                        "id": "A11"
+                    },
+                    {
+                        "name": "Eixample Elegance",
+                        "room": "3B2B",
+                        "capacity": 6,
+                        "cost": 2000,
+                        "rating": 9,
+                        "amenities": [
+                            "Elevator",
+                            "High-Speed WiFi",
+                            "Air Conditioning",
+                            "Garden"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 90,
+                            "cost_late_checkout_fee": null,
+                            "cost_early_checkin_fee": null
+                        },
+                        "id": "A20"
+                    },
+                    {
+                        "name": "Cozy Catalan Flat",
+                        "room": "2B2B",
+                        "capacity": 4,
+                        "cost": 1500,
+                        "rating": 7,
+                        "amenities": [
+                            "Washer and Dryer",
+                            "Pets Allowed",
+                            "Air Conditioning",
+                            "Garden"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 70,
+                            "cost_late_checkout_fee": null,
+                            "cost_early_checkin_fee": 20
+                        },
+                        "id": "A1"
+                    }
+                ],
+                "noise": [
+                    {
+                        "name": "Spaceship Galaxy Retreat",
+                        "room": "8B8B",
+                        "capacity": 100,
+                        "cost": 5000000,
+                        "rating": 11,
+                        "amenities": [
+                            "Kitchen",
+                            "Washer and Dryer"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 50000,
+                            "cost_late_checkout_fee": 5000,
+                            "cost_early_checkin_fee": null
+                        },
+                        "id": "A7"
+                    },
+                    {
+                        "name": "Underwater Bubble Suite",
+                        "room": "1B1B",
+                        "capacity": 2,
+                        "cost": 999999,
+                        "rating": 2,
+                        "amenities": [
+                            "Parking"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": null,
+                            "cost_late_checkout_fee": null,
+                            "cost_early_checkin_fee": null
+                        },
+                        "id": "A4"
+                    },
+                    {
+                        "name": "Cloud Nine Floating Villa",
+                        "room": "3B3B",
+                        "capacity": 8,
+                        "cost": 150000,
+                        "rating": 5,
+                        "amenities": [
+                            "Elevator"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 1000,
+                            "cost_late_checkout_fee": 500,
+                            "cost_early_checkin_fee": 300
+                        },
+                        "id": "A15"
+                    },
+                    {
+                        "name": "Magical Treehouse Adventure",
+                        "room": "2B2B",
+                        "capacity": 4,
+                        "cost": 300,
+                        "rating": -1,
+                        "amenities": [
+                            "Garden",
+                            "Parking"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": 50,
+                            "cost_late_checkout_fee": 20,
+                            "cost_early_checkin_fee": 10
+                        },
+                        "id": "A18"
+                    },
+                    {
+                        "name": "Invisible Castle",
+                        "room": "6B6B",
+                        "capacity": 12,
+                        "cost": 750,
+                        "rating": 10,
+                        "amenities": [
+                            "Air Conditioning"
+                        ],
+                        "service": {
+                            "cost_cleaning_total": null,
+                            "cost_late_checkout_fee": null,
+                            "cost_early_checkin_fee": null
+                        },
+                        "id": "A5"
+                    }
+                ]
+            }
+        },
+        "flight": {
+            "preferences": [
+                [
+                    "flight",
+                    "amenities",
+                    "prefer having meal service on the flight",
+                    "Having a meal onboard is a comforting ritual for me, making the flight feel more like home.",
+                    "Correct options should have Meal Service available and listed in the amenities. Wrong options could be wrong against this preference by do not contain Meal Service in the amenity."
+                ],
+                [
+                    "flight",
+                    "service",
+                    "prefer business class",
+                    "I enjoy having a bit more personal space and privacy, and some exclusive amenities, during the flights.",
+                    "Correct options should have business class listed in the service and value is not null. Wrong options could be wrong against this preference by not having business class cost listed or its value is null, indicating that business class is not available."
+                ]
+            ],
+            "arguments": {
+                "origin": "New York",
+                "destination": "Barcelona",
+                "date": "April 10th"
+            },
+            "all_ids": [
+                "F5",
+                "F20",
+                "F15",
+                "F6",
+                "F13",
+                "F3",
+                "F7",
+                "F17",
+                "F18",
+                "F16",
+                "F22",
+                "F10",
+                "F9",
+                "F12",
+                "F21",
+                "F11",
+                "F8",
+                "F19",
+                "F4",
+                "F1",
+                "F14",
+                "F2"
+            ],
+            "correct_ids": [
+                "F19",
+                "F2",
+                "F4"
+            ],
+            "wrong_ids": [
+                "F10",
+                "F3",
+                "F1",
+                "F17",
+                "F16",
+                "F9",
+                "F7",
+                "F15",
+                "F18",
+                "F5"
+            ],
+            "noise_ids": [
+                "F11",
+                "F6",
+                "F8",
+                "F20",
+                "F21",
+                "F22",
+                "F13",
+                "F12",
+                "F14"
+            ],
+            "best_id": "F2",
+            "best_id_thought": "To determine the option with the lowest cost, we need to consider the base cost of each option and add the cost of upgrading to business class, as the user prefers business class. All options provide meal service, so there is no additional cost for that preference. Let's calculate the total cost for each option:\n\n1. Option F19:\n   - Base cost: $600\n   - Business class upgrade: $250\n   - Total cost: $600 + $250 = $850\n\n2. Option F2:\n   - Base cost: $550\n   - Business class upgrade: $200\n   - Total cost: $550 + $200 = $750\n\n3. Option F4:\n   - Base cost: $580\n   - Business class upgrade: $225\n   - Total cost: $580 + $225 = $805\n\nAfter calculating the total costs, Option F2 has the lowest total cost of $750. Therefore, the option with the lowest cost is Option F2.",
+            "options": {
+                "correct": [
+                    {
+                        "path": [
+                            "New York",
+                            "Paris",
+                            "Barcelona"
+                        ],
+                        "time": [
+                            7.5,
+                            2,
+                            2
+                        ],
+                        "company": [
+                            "American Airlines",
+                            "Iberia"
+                        ],
+                        "flight_number": [
+                            "AA123",
+                            "IB456"
+                        ],
+                        "cost": 550,
+                        "amenities": [
+                            "Meal Service",
+                            "Carry on Baggage Allowance"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 50,
+                            "cost_business_total": 200
+                        },
+                        "id": "F2"
+                    },
+                    {
+                        "path": [
+                            "New York",
+                            "London",
+                            "Barcelona"
+                        ],
+                        "time": [
+                            7,
+                            1.5,
+                            2
+                        ],
+                        "company": [
+                            "British Airways",
+                            "Vueling"
+                        ],
+                        "flight_number": [
+                            "BA789",
+                            "VY101"
+                        ],
+                        "cost": 580,
+                        "amenities": [
+                            "WiFi",
+                            "Meal Service",
+                            "Lounge Access"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 55,
+                            "cost_business_total": 225
+                        },
+                        "id": "F4"
+                    },
+                    {
+                        "path": [
+                            "New York",
+                            "Barcelona"
+                        ],
+                        "time": [
+                            7.5
+                        ],
+                        "company": [
+                            "Delta Airlines"
+                        ],
+                        "flight_number": [
+                            "DL456"
+                        ],
+                        "cost": 600,
+                        "amenities": [
+                            "WiFi",
+                            "Meal Service",
+                            "Carry on Baggage Allowance"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 60,
+                            "cost_business_total": 250
+                        },
+                        "id": "F19"
+                    }
+                ],
+                "wrong": [
+                    {
+                        "path": [
+                            "New York",
+                            "Dublin",
+                            "Barcelona"
+                        ],
+                        "time": [
+                            7,
+                            3,
+                            2
+                        ],
+                        "company": [
+                            "Aer Lingus",
+                            "Vueling"
+                        ],
+                        "flight_number": [
+                            "EI500",
+                            "VY600"
+                        ],
+                        "cost": 600,
+                        "amenities": [
+                            "WiFi",
+                            "Lounge Access"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 40,
+                            "cost_business_total": null
+                        },
+                        "id": "F1"
+                    },
+                    {
+                        "path": [
+                            "New York",
+                            "London",
+                            "Barcelona"
+                        ],
+                        "time": [
+                            7,
+                            2,
+                            2
+                        ],
+                        "company": [
+                            "American Airlines",
+                            "British Airways"
+                        ],
+                        "flight_number": [
+                            "AA100",
+                            "BA200"
+                        ],
+                        "cost": 700,
+                        "amenities": [
+                            "WiFi",
+                            "Carry on Baggage Allowance"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 50,
+                            "cost_business_total": null
+                        },
+                        "id": "F10"
+                    },
+                    {
+                        "path": [
+                            "New York",
+                            "Frankfurt",
+                            "Barcelona"
+                        ],
+                        "time": [
+                            7,
+                            2,
+                            2
+                        ],
+                        "company": [
+                            "Lufthansa",
+                            "Vueling"
+                        ],
+                        "flight_number": [
+                            "LH900",
+                            "VY1000"
+                        ],
+                        "cost": 720,
+                        "amenities": [
+                            "WiFi",
+                            "Meal Service"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 80,
+                            "cost_business_total": null
+                        },
+                        "id": "F16"
+                    },
+                    {
+                        "path": [
+                            "New York",
+                            "Zurich",
+                            "Barcelona"
+                        ],
+                        "time": [
+                            8,
+                            2,
+                            1
+                        ],
+                        "company": [
+                            "Swiss Airlines",
+                            "Iberia"
+                        ],
+                        "flight_number": [
+                            "LX1300",
+                            "IB1400"
+                        ],
+                        "cost": 740,
+                        "amenities": [
+                            "WiFi",
+                            "Carry on Baggage Allowance"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 70,
+                            "cost_business_total": null
+                        },
+                        "id": "F7"
+                    },
+                    {
+                        "path": [
+                            "New York",
+                            "Istanbul",
+                            "Barcelona"
+                        ],
+                        "time": [
+                            9,
+                            2,
+                            1
+                        ],
+                        "company": [
+                            "Turkish Airlines",
+                            "Vueling"
+                        ],
+                        "flight_number": [
+                            "TK1900",
+                            "VY2000"
+                        ],
+                        "cost": 730,
+                        "amenities": [
+                            "WiFi",
+                            "Meal Service"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 65,
+                            "cost_business_total": null
+                        },
+                        "id": "F5"
+                    },
+                    {
+                        "path": [
+                            "New York",
+                            "Amsterdam",
+                            "Barcelona"
+                        ],
+                        "time": [
+                            7,
+                            2,
+                            2
+                        ],
+                        "company": [
+                            "KLM",
+                            "Vueling"
+                        ],
+                        "flight_number": [
+                            "KL1500",
+                            "VY1600"
+                        ],
+                        "cost": 710,
+                        "amenities": [
+                            "Lounge Access",
+                            "Meal Service"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 60,
+                            "cost_business_total": null
+                        },
+                        "id": "F15"
+                    },
+                    {
+                        "path": [
+                            "New York",
+                            "Rome",
+                            "Barcelona"
+                        ],
+                        "time": [
+                            9,
+                            1,
+                            1
+                        ],
+                        "company": [
+                            "Alitalia",
+                            "Vueling"
+                        ],
+                        "flight_number": [
+                            "AZ1100",
+                            "VY1200"
+                        ],
+                        "cost": 680,
+                        "amenities": [
+                            "WiFi",
+                            "Lounge Access"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 50,
+                            "cost_business_total": null
+                        },
+                        "id": "F9"
+                    },
+                    {
+                        "path": [
+                            "New York",
+                            "Madrid",
+                            "Barcelona"
+                        ],
+                        "time": [
+                            8,
+                            1,
+                            1
+                        ],
+                        "company": [
+                            "Delta Airlines",
+                            "Iberia"
+                        ],
+                        "flight_number": [
+                            "DL300",
+                            "IB400"
+                        ],
+                        "cost": 650,
+                        "amenities": [
+                            "WiFi",
+                            "Meal Service"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 70,
+                            "cost_business_total": null
+                        },
+                        "id": "F3"
+                    },
+                    {
+                        "path": [
+                            "New York",
+                            "Paris",
+                            "Barcelona"
+                        ],
+                        "time": [
+                            8,
+                            2,
+                            1
+                        ],
+                        "company": [
+                            "United Airlines",
+                            "Air France"
+                        ],
+                        "flight_number": [
+                            "UA700",
+                            "AF800"
+                        ],
+                        "cost": 750,
+                        "amenities": [
+                            "Carry on Baggage Allowance",
+                            "Meal Service"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 60,
+                            "cost_business_total": null
+                        },
+                        "id": "F17"
+                    },
+                    {
+                        "path": [
+                            "New York",
+                            "Lisbon",
+                            "Barcelona"
+                        ],
+                        "time": [
+                            7,
+                            2,
+                            2
+                        ],
+                        "company": [
+                            "TAP Air Portugal",
+                            "Vueling"
+                        ],
+                        "flight_number": [
+                            "TP1700",
+                            "VY1800"
+                        ],
+                        "cost": 690,
+                        "amenities": [
+                            "WiFi",
+                            "Carry on Baggage Allowance"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 55,
+                            "cost_business_total": null
+                        },
+                        "id": "F18"
+                    }
+                ],
+                "noise": [
+                    {
+                        "path": [
+                            "New York",
+                            "Atlantis"
+                        ],
+                        "time": [
+                            5
+                        ],
+                        "company": [
+                            "Mythical Air"
+                        ],
+                        "flight_number": [
+                            "MA123"
+                        ],
+                        "cost": 999999,
+                        "amenities": [
+                            "Carry on Baggage Allowance"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": null,
+                            "cost_business_total": null
+                        },
+                        "id": "F8"
+                    },
+                    {
+                        "path": [
+                            "New York",
+                            "Jupiter"
+                        ],
+                        "time": [
+                            1000
+                        ],
+                        "company": [
+                            "Solar System Cruises"
+                        ],
+                        "flight_number": [
+                            "SSC004"
+                        ],
+                        "cost": 500000,
+                        "amenities": [
+                            "Meal Service"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 50000,
+                            "cost_business_total": 100000
+                        },
+                        "id": "F6"
+                    },
+                    {
+                        "path": [
+                            "New York"
+                        ],
+                        "time": [
+                            0
+                        ],
+                        "company": [
+                            "Error Airlines"
+                        ],
+                        "flight_number": [
+                            "404"
+                        ],
+                        "cost": 0,
+                        "amenities": [],
+                        "service": {
+                            "cost_check_bag_total": null,
+                            "cost_business_total": null
+                        },
+                        "id": "F20"
+                    },
+                    {
+                        "path": [
+                            "New York",
+                            "Narnia"
+                        ],
+                        "time": [
+                            10
+                        ],
+                        "company": [
+                            "Fantasy Flights"
+                        ],
+                        "flight_number": [
+                            "FF007"
+                        ],
+                        "cost": 777777,
+                        "amenities": [
+                            "WiFi",
+                            "Meal Service"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 77777,
+                            "cost_business_total": 77777
+                        },
+                        "id": "F21"
+                    },
+                    {
+                        "path": [
+                            "Mars",
+                            "Venus",
+                            "Pluto"
+                        ],
+                        "time": [
+                            50,
+                            10,
+                            300
+                        ],
+                        "company": [
+                            "Galactic Airways",
+                            "Venusian Flights",
+                            "Plutonian Express"
+                        ],
+                        "flight_number": [
+                            "GA001",
+                            "VF002",
+                            "PE003"
+                        ],
+                        "cost": 1234567,
+                        "amenities": [
+                            "WiFi",
+                            "Lounge Access"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 1000000,
+                            "cost_business_total": null
+                        },
+                        "id": "F11"
+                    }
+                ]
+            }
+        },
+        "initial_description": "I am planning a trip to Barcelona, flying one-way from New York on April 10th, and staying in an apartment in Barcelona from April 10th to April 20th."
+    },
+    "all_options": {
+        "apartment": [
+            {
+                "name": "Spaceship Galaxy Retreat",
+                "room": "8B8B",
+                "capacity": 100,
+                "cost": 5000000,
+                "rating": 11,
+                "amenities": [
+                    "Kitchen",
+                    "Washer and Dryer"
+                ],
+                "service": {
+                    "cost_cleaning_total": 50000,
+                    "cost_late_checkout_fee": 5000,
+                    "cost_early_checkin_fee": null
+                },
+                "id": "A7"
+            },
+            {
+                "name": "Gothic Quarter Studio",
+                "room": "1B1B",
+                "capacity": 2,
+                "cost": 1100,
+                "rating": 6,
+                "amenities": [
+                    "Kitchen",
+                    "Air Conditioning",
+                    "High-Speed WiFi"
+                ],
+                "service": {
+                    "cost_cleaning_total": 40,
+                    "cost_late_checkout_fee": 25,
+                    "cost_early_checkin_fee": null
+                },
+                "id": "A6"
+            },
+            {
+                "name": "Eixample Elegance",
+                "room": "3B2B",
+                "capacity": 6,
+                "cost": 2000,
+                "rating": 9,
+                "amenities": [
+                    "Elevator",
+                    "High-Speed WiFi",
+                    "Air Conditioning",
+                    "Garden"
+                ],
+                "service": {
+                    "cost_cleaning_total": 90,
+                    "cost_late_checkout_fee": null,
+                    "cost_early_checkin_fee": null
+                },
+                "id": "A20"
+            },
+            {
+                "name": "Luxury Oasis in Barcelona",
+                "room": "3B3B",
+                "capacity": 6,
+                "cost": 2500,
+                "rating": 9,
+                "amenities": [
+                    "Kitchen",
+                    "High-Speed WiFi",
+                    "Air Conditioning",
+                    "Parking",
+                    "Garden"
+                ],
+                "service": {
+                    "cost_cleaning_total": 150,
+                    "cost_late_checkout_fee": 70,
+                    "cost_early_checkin_fee": 40
+                },
+                "id": "A3"
+            },
+            {
+                "name": "Rambla's Retreat",
+                "room": "2B1B",
+                "capacity": 4,
+                "cost": 1700,
+                "rating": 8,
+                "amenities": [
+                    "Parking",
+                    "Elevator",
+                    "Kitchen"
+                ],
+                "service": {
+                    "cost_cleaning_total": 60,
+                    "cost_late_checkout_fee": 40,
+                    "cost_early_checkin_fee": null
+                },
+                "id": "A11"
+            },
+            {
+                "name": "Parkside Paradise",
+                "room": "3B2B",
+                "capacity": 5,
+                "cost": 2100,
+                "rating": 8,
+                "amenities": [
+                    "Garden",
+                    "High-Speed WiFi",
+                    "Air Conditioning"
+                ],
+                "service": {
+                    "cost_cleaning_total": 80,
+                    "cost_late_checkout_fee": null,
+                    "cost_early_checkin_fee": null
+                },
+                "id": "A12"
+            },
+            {
+                "name": "Seaside Serenity",
+                "room": "4B4B",
+                "capacity": 10,
+                "cost": 3000,
+                "rating": 10,
+                "amenities": [
+                    "Air Conditioning",
+                    "Parking",
+                    "Elevator"
+                ],
+                "service": {
+                    "cost_cleaning_total": 120,
+                    "cost_late_checkout_fee": 30,
+                    "cost_early_checkin_fee": 50
+                },
+                "id": "A8"
+            },
+            {
+                "name": "Invisible Castle",
+                "room": "6B6B",
+                "capacity": 12,
+                "cost": 750,
+                "rating": 10,
+                "amenities": [
+                    "Air Conditioning"
+                ],
+                "service": {
+                    "cost_cleaning_total": null,
+                    "cost_late_checkout_fee": null,
+                    "cost_early_checkin_fee": null
+                },
+                "id": "A5"
+            },
+            {
+                "name": "Modernist Marvel",
+                "room": "3B3B",
+                "capacity": 8,
+                "cost": 2500,
+                "rating": 9,
+                "amenities": [
+                    "Pets Allowed",
+                    "Washer and Dryer",
+                    "High-Speed WiFi"
+                ],
+                "service": {
+                    "cost_cleaning_total": 100,
+                    "cost_late_checkout_fee": null,
+                    "cost_early_checkin_fee": null
+                },
+                "id": "A13"
+            },
+            {
+                "name": "Underwater Bubble Suite",
+                "room": "1B1B",
+                "capacity": 2,
+                "cost": 999999,
+                "rating": 2,
+                "amenities": [
+                    "Parking"
+                ],
+                "service": {
+                    "cost_cleaning_total": null,
+                    "cost_late_checkout_fee": null,
+                    "cost_early_checkin_fee": null
+                },
+                "id": "A4"
+            },
+            {
+                "name": "Barcelona Garden Retreat",
+                "room": "2B2B",
+                "capacity": 4,
+                "cost": 1800,
+                "rating": 9,
+                "amenities": [
+                    "Kitchen",
+                    "Washer and Dryer",
+                    "Pets Allowed",
+                    "High-Speed WiFi",
+                    "Air Conditioning",
+                    "Parking",
+                    "Garden"
+                ],
+                "service": {
+                    "cost_cleaning_total": 100,
+                    "cost_late_checkout_fee": 50,
+                    "cost_early_checkin_fee": 30
+                },
+                "id": "A17"
+            },
+            {
+                "name": "Magical Treehouse Adventure",
+                "room": "2B2B",
+                "capacity": 4,
+                "cost": 300,
+                "rating": -1,
+                "amenities": [
+                    "Garden",
+                    "Parking"
+                ],
+                "service": {
+                    "cost_cleaning_total": 50,
+                    "cost_late_checkout_fee": 20,
+                    "cost_early_checkin_fee": 10
+                },
+                "id": "A18"
+            },
+            {
+                "name": "Cloud Nine Floating Villa",
+                "room": "3B3B",
+                "capacity": 8,
+                "cost": 150000,
+                "rating": 5,
+                "amenities": [
+                    "Elevator"
+                ],
+                "service": {
+                    "cost_cleaning_total": 1000,
+                    "cost_late_checkout_fee": 500,
+                    "cost_early_checkin_fee": 300
+                },
+                "id": "A15"
+            },
+            {
+                "name": "Sunny Barcelona Loft",
+                "room": "1B1B",
+                "capacity": 2,
+                "cost": 1200,
+                "rating": 8,
+                "amenities": [
+                    "Air Conditioning",
+                    "Kitchen",
+                    "High-Speed WiFi",
+                    "Parking"
+                ],
+                "service": {
+                    "cost_cleaning_total": 50,
+                    "cost_late_checkout_fee": null,
+                    "cost_early_checkin_fee": 30
+                },
+                "id": "A14"
+            },
+            {
+                "name": "La Rambla Luxury",
+                "room": "6B6B",
+                "capacity": 12,
+                "cost": 5000,
+                "rating": 10,
+                "amenities": [
+                    "Pets Allowed",
+                    "Parking",
+                    "Air Conditioning"
+                ],
+                "service": {
+                    "cost_cleaning_total": 200,
+                    "cost_late_checkout_fee": null,
+                    "cost_early_checkin_fee": null
+                },
+                "id": "A21"
+            },
+            {
+                "name": "Rooftop Rambler",
+                "room": "2B1B",
+                "capacity": 3,
+                "cost": 1600,
+                "rating": 7,
+                "amenities": [
+                    "Elevator",
+                    "Washer and Dryer",
+                    "Kitchen"
+                ],
+                "service": {
+                    "cost_cleaning_total": 60,
+                    "cost_late_checkout_fee": 25,
+                    "cost_early_checkin_fee": null
+                },
+                "id": "A2"
+            },
+            {
+                "name": "Cozy Catalan Flat",
+                "room": "2B2B",
+                "capacity": 4,
+                "cost": 1500,
+                "rating": 7,
+                "amenities": [
+                    "Washer and Dryer",
+                    "Pets Allowed",
+                    "Air Conditioning",
+                    "Garden"
+                ],
+                "service": {
+                    "cost_cleaning_total": 70,
+                    "cost_late_checkout_fee": null,
+                    "cost_early_checkin_fee": 20
+                },
+                "id": "A1"
+            },
+            {
+                "name": "Charming Urban Villa",
+                "room": "4B4B",
+                "capacity": 8,
+                "cost": 3000,
+                "rating": 10,
+                "amenities": [
+                    "Kitchen",
+                    "Washer and Dryer",
+                    "High-Speed WiFi",
+                    "Air Conditioning",
+                    "Parking",
+                    "Elevator",
+                    "Garden"
+                ],
+                "service": {
+                    "cost_cleaning_total": 200,
+                    "cost_late_checkout_fee": 80,
+                    "cost_early_checkin_fee": null
+                },
+                "id": "A16"
+            }
+        ],
+        "flight": [
+            {
+                "path": [
+                    "New York",
+                    "Istanbul",
+                    "Barcelona"
+                ],
+                "time": [
+                    9,
+                    2,
+                    1
+                ],
+                "company": [
+                    "Turkish Airlines",
+                    "Vueling"
+                ],
+                "flight_number": [
+                    "TK1900",
+                    "VY2000"
+                ],
+                "cost": 730,
+                "amenities": [
+                    "WiFi",
+                    "Meal Service"
+                ],
+                "service": {
+                    "cost_check_bag_total": 65,
+                    "cost_business_total": null
+                },
+                "id": "F5"
+            },
+            {
+                "path": [
+                    "New York",
+                    "Atlantis"
+                ],
+                "time": [
+                    5
+                ],
+                "company": [
+                    "Mythical Air"
+                ],
+                "flight_number": [
+                    "MA123"
+                ],
+                "cost": 999999,
+                "amenities": [
+                    "Carry on Baggage Allowance"
+                ],
+                "service": {
+                    "cost_check_bag_total": null,
+                    "cost_business_total": null
+                },
+                "id": "F8"
+            },
+            {
+                "path": [
+                    "Mars",
+                    "Venus",
+                    "Pluto"
+                ],
+                "time": [
+                    50,
+                    10,
+                    300
+                ],
+                "company": [
+                    "Galactic Airways",
+                    "Venusian Flights",
+                    "Plutonian Express"
+                ],
+                "flight_number": [
+                    "GA001",
+                    "VF002",
+                    "PE003"
+                ],
+                "cost": 1234567,
+                "amenities": [
+                    "WiFi",
+                    "Lounge Access"
+                ],
+                "service": {
+                    "cost_check_bag_total": 1000000,
+                    "cost_business_total": null
+                },
+                "id": "F11"
+            },
+            {
+                "path": [
+                    "New York",
+                    "Narnia"
+                ],
+                "time": [
+                    10
+                ],
+                "company": [
+                    "Fantasy Flights"
+                ],
+                "flight_number": [
+                    "FF007"
+                ],
+                "cost": 777777,
+                "amenities": [
+                    "WiFi",
+                    "Meal Service"
+                ],
+                "service": {
+                    "cost_check_bag_total": 77777,
+                    "cost_business_total": 77777
+                },
+                "id": "F21"
+            },
+            {
+                "path": [
+                    "New York",
+                    "London",
+                    "Barcelona"
+                ],
+                "time": [
+                    7,
+                    1.5,
+                    2
+                ],
+                "company": [
+                    "British Airways",
+                    "Vueling"
+                ],
+                "flight_number": [
+                    "BA789",
+                    "VY101"
+                ],
+                "cost": 580,
+                "amenities": [
+                    "WiFi",
+                    "Meal Service",
+                    "Lounge Access"
+                ],
+                "service": {
+                    "cost_check_bag_total": 55,
+                    "cost_business_total": 225
+                },
+                "id": "F4"
+            },
+            {
+                "path": [
+                    "New York",
+                    "Dublin",
+                    "Barcelona"
+                ],
+                "time": [
+                    7,
+                    3,
+                    2
+                ],
+                "company": [
+                    "Aer Lingus",
+                    "Vueling"
+                ],
+                "flight_number": [
+                    "EI500",
+                    "VY600"
+                ],
+                "cost": 600,
+                "amenities": [
+                    "WiFi",
+                    "Lounge Access"
+                ],
+                "service": {
+                    "cost_check_bag_total": 40,
+                    "cost_business_total": null
+                },
+                "id": "F1"
+            },
+            {
+                "path": [
+                    "New York"
+                ],
+                "time": [
+                    0
+                ],
+                "company": [
+                    "Error Airlines"
+                ],
+                "flight_number": [
+                    "404"
+                ],
+                "cost": 0,
+                "amenities": [],
+                "service": {
+                    "cost_check_bag_total": null,
+                    "cost_business_total": null
+                },
+                "id": "F20"
+            },
+            {
+                "path": [
+                    "New York",
+                    "Frankfurt",
+                    "Barcelona"
+                ],
+                "time": [
+                    7,
+                    2,
+                    2
+                ],
+                "company": [
+                    "Lufthansa",
+                    "Vueling"
+                ],
+                "flight_number": [
+                    "LH900",
+                    "VY1000"
+                ],
+                "cost": 720,
+                "amenities": [
+                    "WiFi",
+                    "Meal Service"
+                ],
+                "service": {
+                    "cost_check_bag_total": 80,
+                    "cost_business_total": null
+                },
+                "id": "F16"
+            },
+            {
+                "path": [
+                    "New York",
+                    "Paris",
+                    "Barcelona"
+                ],
+                "time": [
+                    7.5,
+                    2,
+                    2
+                ],
+                "company": [
+                    "American Airlines",
+                    "Iberia"
+                ],
+                "flight_number": [
+                    "AA123",
+                    "IB456"
+                ],
+                "cost": 550,
+                "amenities": [
+                    "Meal Service",
+                    "Carry on Baggage Allowance"
+                ],
+                "service": {
+                    "cost_check_bag_total": 50,
+                    "cost_business_total": 200
+                },
+                "id": "F2"
+            },
+            {
+                "path": [
+                    "New York",
+                    "Lisbon",
+                    "Barcelona"
+                ],
+                "time": [
+                    7,
+                    2,
+                    2
+                ],
+                "company": [
+                    "TAP Air Portugal",
+                    "Vueling"
+                ],
+                "flight_number": [
+                    "TP1700",
+                    "VY1800"
+                ],
+                "cost": 690,
+                "amenities": [
+                    "WiFi",
+                    "Carry on Baggage Allowance"
+                ],
+                "service": {
+                    "cost_check_bag_total": 55,
+                    "cost_business_total": null
+                },
+                "id": "F18"
+            },
+            {
+                "path": [
+                    "New York",
+                    "Jupiter"
+                ],
+                "time": [
+                    1000
+                ],
+                "company": [
+                    "Solar System Cruises"
+                ],
+                "flight_number": [
+                    "SSC004"
+                ],
+                "cost": 500000,
+                "amenities": [
+                    "Meal Service"
+                ],
+                "service": {
+                    "cost_check_bag_total": 50000,
+                    "cost_business_total": 100000
+                },
+                "id": "F6"
+            },
+            {
+                "path": [
+                    "New York",
+                    "London",
+                    "Barcelona"
+                ],
+                "time": [
+                    7,
+                    2,
+                    2
+                ],
+                "company": [
+                    "American Airlines",
+                    "British Airways"
+                ],
+                "flight_number": [
+                    "AA100",
+                    "BA200"
+                ],
+                "cost": 700,
+                "amenities": [
+                    "WiFi",
+                    "Carry on Baggage Allowance"
+                ],
+                "service": {
+                    "cost_check_bag_total": 50,
+                    "cost_business_total": null
+                },
+                "id": "F10"
+            },
+            {
+                "path": [
+                    "New York",
+                    "Paris",
+                    "Barcelona"
+                ],
+                "time": [
+                    8,
+                    2,
+                    1
+                ],
+                "company": [
+                    "United Airlines",
+                    "Air France"
+                ],
+                "flight_number": [
+                    "UA700",
+                    "AF800"
+                ],
+                "cost": 750,
+                "amenities": [
+                    "Carry on Baggage Allowance",
+                    "Meal Service"
+                ],
+                "service": {
+                    "cost_check_bag_total": 60,
+                    "cost_business_total": null
+                },
+                "id": "F17"
+            },
+            {
+                "path": [
+                    "New York",
+                    "Rome",
+                    "Barcelona"
+                ],
+                "time": [
+                    9,
+                    1,
+                    1
+                ],
+                "company": [
+                    "Alitalia",
+                    "Vueling"
+                ],
+                "flight_number": [
+                    "AZ1100",
+                    "VY1200"
+                ],
+                "cost": 680,
+                "amenities": [
+                    "WiFi",
+                    "Lounge Access"
+                ],
+                "service": {
+                    "cost_check_bag_total": 50,
+                    "cost_business_total": null
+                },
+                "id": "F9"
+            },
+            {
+                "path": [
+                    "New York",
+                    "Barcelona"
+                ],
+                "time": [
+                    7.5
+                ],
+                "company": [
+                    "Delta Airlines"
+                ],
+                "flight_number": [
+                    "DL456"
+                ],
+                "cost": 600,
+                "amenities": [
+                    "WiFi",
+                    "Meal Service",
+                    "Carry on Baggage Allowance"
+                ],
+                "service": {
+                    "cost_check_bag_total": 60,
+                    "cost_business_total": 250
+                },
+                "id": "F19"
+            },
+            {
+                "path": [
+                    "New York",
+                    "Madrid",
+                    "Barcelona"
+                ],
+                "time": [
+                    8,
+                    1,
+                    1
+                ],
+                "company": [
+                    "Delta Airlines",
+                    "Iberia"
+                ],
+                "flight_number": [
+                    "DL300",
+                    "IB400"
+                ],
+                "cost": 650,
+                "amenities": [
+                    "WiFi",
+                    "Meal Service"
+                ],
+                "service": {
+                    "cost_check_bag_total": 70,
+                    "cost_business_total": null
+                },
+                "id": "F3"
+            },
+            {
+                "path": [
+                    "New York",
+                    "Amsterdam",
+                    "Barcelona"
+                ],
+                "time": [
+                    7,
+                    2,
+                    2
+                ],
+                "company": [
+                    "KLM",
+                    "Vueling"
+                ],
+                "flight_number": [
+                    "KL1500",
+                    "VY1600"
+                ],
+                "cost": 710,
+                "amenities": [
+                    "Lounge Access",
+                    "Meal Service"
+                ],
+                "service": {
+                    "cost_check_bag_total": 60,
+                    "cost_business_total": null
+                },
+                "id": "F15"
+            },
+            {
+                "path": [
+                    "New York",
+                    "Zurich",
+                    "Barcelona"
+                ],
+                "time": [
+                    8,
+                    2,
+                    1
+                ],
+                "company": [
+                    "Swiss Airlines",
+                    "Iberia"
+                ],
+                "flight_number": [
+                    "LX1300",
+                    "IB1400"
+                ],
+                "cost": 740,
+                "amenities": [
+                    "WiFi",
+                    "Carry on Baggage Allowance"
+                ],
+                "service": {
+                    "cost_check_bag_total": 70,
+                    "cost_business_total": null
+                },
+                "id": "F7"
+            }
+        ]
+    },
+    "arguments": {
+        "apartment": {
+            "city": "Barcelona",
+            "date_start": "April 10th",
+            "date_end": "April 20th"
+        },
+        "flight": {
+            "origin": "New York",
+            "destination": "Barcelona",
+            "date": "April 10th"
+        }
+    }
+}

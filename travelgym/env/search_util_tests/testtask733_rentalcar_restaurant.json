@@ -1,0 +1,1555 @@
+{
+    "id": "rental_car:3-103|restaurant:3-193",
+    "scenario": "I'm planning a family road trip to San Francisco from December 15th to December 20th. For the journey, I've been quite intrigued by the idea of driving a Tesla Model 3, especially after reading about how its autopilot feature can make long drives more relaxing. Given that we'll be parking in various unfamiliar areas, having insurance that covers our belongings would provide peace of mind. Additionally, ensuring we have a child seat in the car is crucial for our little one's comfort and safety. Once we arrive in San Francisco, I want to explore the local dining scene. I've recently become quite interested in plant-based meals after reading about their health benefits, so I'm keen on finding a restaurant that offers delicious vegetarian options. It's important to me that the restaurant has a stellar reputation, with the majority of its reviews being five-star. Also, since I believe the best conversations happen over meals late at night, I'd like to find a place that stays open past 10 PM.",
+    "category": "travel_planning",
+    "dimensions": [
+        "rental_car",
+        "restaurant"
+    ],
+    "wanted_num": [
+        3,
+        3
+    ],
+    "initial_desc": "I need a rental car in San Francisco from December 15th to December 20th and a restaurant reservation in San Francisco on December 16th.",
+    "preferences": {
+        "scenario": "I'm planning a family road trip to San Francisco from December 15th to December 20th. For the journey, I've been quite intrigued by the idea of driving a Tesla Model 3, especially after reading about how its autopilot feature can make long drives more relaxing. Given that we'll be parking in various unfamiliar areas, having insurance that covers our belongings would provide peace of mind. Additionally, ensuring we have a child seat in the car is crucial for our little one's comfort and safety. Once we arrive in San Francisco, I want to explore the local dining scene. I've recently become quite interested in plant-based meals after reading about their health benefits, so I'm keen on finding a restaurant that offers delicious vegetarian options. It's important to me that the restaurant has a stellar reputation, with the majority of its reviews being five-star. Also, since I believe the best conversations happen over meals late at night, I'd like to find a place that stays open past 10 PM.",
+        "wanted_num": [
+            3,
+            3
+        ],
+        "difficulty": "medium",
+        "dimensions": [
+            "rental_car",
+            "restaurant"
+        ],
+        "rental_car": {
+            "preferences": [
+                [
+                    "rental_car",
+                    "model",
+                    "prefer specific car model (user specifies)",
+                    "After reading a review about how the Tesla Model 3's autopilot feature makes long drives more relaxing, I'm really intrigued to experience it.",
+                    "Correct options should be the user-specified rental car model. Wrong options could be other models that is not what user prefers, in order to make it against this preference."
+                ],
+                [
+                    "rental_car",
+                    "insurance",
+                    "prefer having belonging insurance",
+                    "When parking in unfamiliar areas like where I will go this time, I worry about theft more than damage.",
+                    "Correct options should have belonging waiver cost listed in the insurance and value is not null. Wrong options could be wrong against this preference by not having belonging waiver cost listed or its value is null, indicating that belonging insurance is not available."
+                ],
+                [
+                    "rental_car",
+                    "service",
+                    "prefer having additional child seat",
+                    "Every time we travel without a child seat, we realize how much more comfortable and safe the trip could have been with one. I want to ensure I will have them this time to make my mind in peace while driving.",
+                    "Correct options should have child seat cost listed in the service and value is not null. Wrong options could be wrong against this preference by not having child seat cost listed or its value is null, indicating that child seat is not available."
+                ]
+            ],
+            "arguments": {
+                "city": "San Francisco",
+                "date_start": "December 15th",
+                "date_end": "December 20th"
+            },
+            "all_ids": [
+                "C15",
+                "C1",
+                "C21",
+                "C16",
+                "C17",
+                "C6",
+                "C14",
+                "C5",
+                "C8",
+                "C20",
+                "C4",
+                "C22",
+                "C3",
+                "C13",
+                "C2",
+                "C10",
+                "C18",
+                "C11",
+                "C19",
+                "C7",
+                "C9",
+                "C12"
+            ],
+            "correct_ids": [
+                "C18",
+                "C22",
+                "C17"
+            ],
+            "wrong_ids": [
+                "C9",
+                "C15",
+                "C3",
+                "C5",
+                "C13",
+                "C21",
+                "C12",
+                "C1",
+                "C7",
+                "C2"
+            ],
+            "noise_ids": [
+                "C4",
+                "C14",
+                "C16",
+                "C20",
+                "C6",
+                "C8",
+                "C11",
+                "C10",
+                "C19"
+            ],
+            "best_id": "C18",
+            "best_id_thought": "To determine the option with the lowest cost, we need to consider the base cost of the rental, the cost of the belonging insurance, and the cost of the additional child seat, as these are the user preferences. We will sum these costs for each option and compare them. \n\nFor option C18, the total cost is calculated as follows: \n- Base cost: $600 \n- Belonging insurance: $75 \n- Child seat: $30 \nTotal cost for C18 = $600 + $75 + $30 = $705\n\nFor option C22, the total cost is calculated as follows: \n- Base cost: $650 \n- Belonging insurance: $80 \n- Child seat: $35 \nTotal cost for C22 = $650 + $80 + $35 = $765\n\nFor option C17, the total cost is calculated as follows: \n- Base cost: $700 \n- Belonging insurance: $85 \n- Child seat: $40 \nTotal cost for C17 = $700 + $85 + $40 = $825\n\nAfter calculating the total costs, option C18 has the lowest total cost of $705. Therefore, the option with the lowest cost is C18.",
+            "options": {
+                "correct": [
+                    {
+                        "brand": "Tesla",
+                        "model": "Model 3",
+                        "categories": "Electric",
+                        "seats": 5,
+                        "cost": 600,
+                        "insurance": {
+                            "cost_damage_waiver": 150,
+                            "cost_liability_waiver": 100,
+                            "cost_personal_accident_waiver": 50,
+                            "cost_belonging_waiver": 75
+                        },
+                        "service": {
+                            "cost_child_seat_total": 30,
+                            "cost_underage_total": null,
+                            "cost_additional_driver_total": 50
+                        },
+                        "id": "C18"
+                    },
+                    {
+                        "brand": "Tesla",
+                        "model": "Model 3",
+                        "categories": "Electric",
+                        "seats": 5,
+                        "cost": 700,
+                        "insurance": {
+                            "cost_damage_waiver": 170,
+                            "cost_liability_waiver": 120,
+                            "cost_personal_accident_waiver": 60,
+                            "cost_belonging_waiver": 85
+                        },
+                        "service": {
+                            "cost_child_seat_total": 40,
+                            "cost_underage_total": null,
+                            "cost_additional_driver_total": 60
+                        },
+                        "id": "C17"
+                    },
+                    {
+                        "brand": "Tesla",
+                        "model": "Model 3",
+                        "categories": "Electric",
+                        "seats": 5,
+                        "cost": 650,
+                        "insurance": {
+                            "cost_damage_waiver": 160,
+                            "cost_liability_waiver": 110,
+                            "cost_personal_accident_waiver": 55,
+                            "cost_belonging_waiver": 80
+                        },
+                        "service": {
+                            "cost_child_seat_total": 35,
+                            "cost_underage_total": null,
+                            "cost_additional_driver_total": 55
+                        },
+                        "id": "C22"
+                    }
+                ],
+                "wrong": [
+                    {
+                        "brand": "BMW",
+                        "model": "BMW X3",
+                        "categories": "SUV",
+                        "seats": 5,
+                        "cost": 600,
+                        "insurance": {
+                            "cost_damage_waiver": 55,
+                            "cost_liability_waiver": 35,
+                            "cost_personal_accident_waiver": 30,
+                            "cost_belonging_waiver": null
+                        },
+                        "service": {
+                            "cost_child_seat_total": 25,
+                            "cost_underage_total": null,
+                            "cost_additional_driver_total": 30
+                        },
+                        "id": "C21"
+                    },
+                    {
+                        "brand": "Toyota",
+                        "model": "Toyota Prius",
+                        "categories": "Gasoline",
+                        "seats": 5,
+                        "cost": 480,
+                        "insurance": {
+                            "cost_damage_waiver": 45,
+                            "cost_liability_waiver": 30,
+                            "cost_personal_accident_waiver": 25,
+                            "cost_belonging_waiver": 15
+                        },
+                        "service": {
+                            "cost_child_seat_total": null,
+                            "cost_underage_total": 20,
+                            "cost_additional_driver_total": null
+                        },
+                        "id": "C13"
+                    },
+                    {
+                        "brand": "Ford",
+                        "model": "Ford Mustang",
+                        "categories": "Economy",
+                        "seats": 4,
+                        "cost": 450,
+                        "insurance": {
+                            "cost_damage_waiver": 50,
+                            "cost_liability_waiver": 30,
+                            "cost_personal_accident_waiver": 20,
+                            "cost_belonging_waiver": null
+                        },
+                        "service": {
+                            "cost_child_seat_total": 30,
+                            "cost_underage_total": 50,
+                            "cost_additional_driver_total": 25
+                        },
+                        "id": "C9"
+                    },
+                    {
+                        "brand": "Honda",
+                        "model": "Honda Civic",
+                        "categories": "Economy",
+                        "seats": 5,
+                        "cost": 400,
+                        "insurance": {
+                            "cost_damage_waiver": 40,
+                            "cost_liability_waiver": 25,
+                            "cost_personal_accident_waiver": null,
+                            "cost_belonging_waiver": null
+                        },
+                        "service": {
+                            "cost_child_seat_total": 15,
+                            "cost_underage_total": null,
+                            "cost_additional_driver_total": 25
+                        },
+                        "id": "C5"
+                    },
+                    {
+                        "brand": "Hyundai",
+                        "model": "Hyundai Sonata",
+                        "categories": "Economy",
+                        "seats": 5,
+                        "cost": 390,
+                        "insurance": {
+                            "cost_damage_waiver": 35,
+                            "cost_liability_waiver": 25,
+                            "cost_personal_accident_waiver": null,
+                            "cost_belonging_waiver": null
+                        },
+                        "service": {
+                            "cost_child_seat_total": 20,
+                            "cost_underage_total": null,
+                            "cost_additional_driver_total": null
+                        },
+                        "id": "C12"
+                    },
+                    {
+                        "brand": "Mercedes-Benz",
+                        "model": "Mercedes-Benz C-Class",
+                        "categories": "Gasoline",
+                        "seats": 5,
+                        "cost": 700,
+                        "insurance": {
+                            "cost_damage_waiver": 65,
+                            "cost_liability_waiver": 45,
+                            "cost_personal_accident_waiver": 40,
+                            "cost_belonging_waiver": null
+                        },
+                        "service": {
+                            "cost_child_seat_total": 30,
+                            "cost_underage_total": null,
+                            "cost_additional_driver_total": 50
+                        },
+                        "id": "C7"
+                    },
+                    {
+                        "brand": "Audi",
+                        "model": "Audi A4",
+                        "categories": "Economy",
+                        "seats": 5,
+                        "cost": 550,
+                        "insurance": {
+                            "cost_damage_waiver": 50,
+                            "cost_liability_waiver": 30,
+                            "cost_personal_accident_waiver": 20,
+                            "cost_belonging_waiver": null
+                        },
+                        "service": {
+                            "cost_child_seat_total": null,
+                            "cost_underage_total": 25,
+                            "cost_additional_driver_total": null
+                        },
+                        "id": "C2"
+                    },
+                    {
+                        "brand": "Kia",
+                        "model": "Kia Sorento",
+                        "categories": "SUV",
+                        "seats": 7,
+                        "cost": 650,
+                        "insurance": {
+                            "cost_damage_waiver": 60,
+                            "cost_liability_waiver": 40,
+                            "cost_personal_accident_waiver": 35,
+                            "cost_belonging_waiver": null
+                        },
+                        "service": {
+                            "cost_child_seat_total": null,
+                            "cost_underage_total": 30,
+                            "cost_additional_driver_total": null
+                        },
+                        "id": "C1"
+                    },
+                    {
+                        "brand": "Nissan",
+                        "model": "Nissan Altima",
+                        "categories": "Gasoline",
+                        "seats": 5,
+                        "cost": 420,
+                        "insurance": {
+                            "cost_damage_waiver": 50,
+                            "cost_liability_waiver": 30,
+                            "cost_personal_accident_waiver": 20,
+                            "cost_belonging_waiver": null
+                        },
+                        "service": {
+                            "cost_child_seat_total": 20,
+                            "cost_underage_total": null,
+                            "cost_additional_driver_total": null
+                        },
+                        "id": "C3"
+                    },
+                    {
+                        "brand": "Chevrolet",
+                        "model": "Chevrolet Bolt",
+                        "categories": "Electric",
+                        "seats": 5,
+                        "cost": 500,
+                        "insurance": {
+                            "cost_damage_waiver": 40,
+                            "cost_liability_waiver": 35,
+                            "cost_personal_accident_waiver": null,
+                            "cost_belonging_waiver": 20
+                        },
+                        "service": {
+                            "cost_child_seat_total": null,
+                            "cost_underage_total": null,
+                            "cost_additional_driver_total": 20
+                        },
+                        "id": "C15"
+                    }
+                ],
+                "noise": [
+                    {
+                        "brand": "Oceanic Rentals",
+                        "model": "Submarine Explorer",
+                        "categories": "Electric",
+                        "seats": 10,
+                        "cost": 200000,
+                        "insurance": {
+                            "cost_damage_waiver": 10000,
+                            "cost_liability_waiver": 5000,
+                            "cost_personal_accident_waiver": 3000,
+                            "cost_belonging_waiver": 5000
+                        },
+                        "service": {
+                            "cost_child_seat_total": 500,
+                            "cost_underage_total": 2000,
+                            "cost_additional_driver_total": 1500
+                        },
+                        "id": "C16"
+                    },
+                    {
+                        "brand": "Knight Rides",
+                        "model": "Medieval Horse Carriage",
+                        "categories": "Gasoline",
+                        "seats": 2,
+                        "cost": 500,
+                        "insurance": {
+                            "cost_damage_waiver": null,
+                            "cost_liability_waiver": null,
+                            "cost_personal_accident_waiver": null,
+                            "cost_belonging_waiver": null
+                        },
+                        "service": {
+                            "cost_child_seat_total": null,
+                            "cost_underage_total": null,
+                            "cost_additional_driver_total": null
+                        },
+                        "id": "C14"
+                    },
+                    {
+                        "brand": "Time Travel Rentals",
+                        "model": "DeLorean Time Machine",
+                        "categories": "Gasoline",
+                        "seats": 2,
+                        "cost": 1500000,
+                        "insurance": {
+                            "cost_damage_waiver": 100000,
+                            "cost_liability_waiver": 50000,
+                            "cost_personal_accident_waiver": 30000,
+                            "cost_belonging_waiver": 20000
+                        },
+                        "service": {
+                            "cost_child_seat_total": 10000,
+                            "cost_underage_total": 5000,
+                            "cost_additional_driver_total": 3000
+                        },
+                        "id": "C6"
+                    },
+                    {
+                        "brand": "Fantasy Flights",
+                        "model": "Magic Carpet",
+                        "categories": "Gasoline",
+                        "seats": 4,
+                        "cost": 75000,
+                        "insurance": {
+                            "cost_damage_waiver": 3000,
+                            "cost_liability_waiver": 1000,
+                            "cost_personal_accident_waiver": 500,
+                            "cost_belonging_waiver": 200
+                        },
+                        "service": {
+                            "cost_child_seat_total": 200,
+                            "cost_underage_total": 1000,
+                            "cost_additional_driver_total": 750
+                        },
+                        "id": "C20"
+                    },
+                    {
+                        "brand": "Galactic Cruises",
+                        "model": "Starship Enterprise",
+                        "categories": "Electric",
+                        "seats": 500,
+                        "cost": 1000000,
+                        "insurance": {
+                            "cost_damage_waiver": 50000,
+                            "cost_liability_waiver": 20000,
+                            "cost_personal_accident_waiver": 15000,
+                            "cost_belonging_waiver": 10000
+                        },
+                        "service": {
+                            "cost_child_seat_total": 1000,
+                            "cost_underage_total": 5000,
+                            "cost_additional_driver_total": 3000
+                        },
+                        "id": "C4"
+                    }
+                ]
+            }
+        },
+        "restaurant": {
+            "preferences": [
+                [
+                    "restaurant",
+                    "cuisine",
+                    "prefer having vegetarian food",
+                    "After finishing a book on the health benefits of reducing meat consumption, I've been exploring more plant-based meals recently and deeply believe in it now.",
+                    "Correct options should write Vegetarian in the cuisine field. Wrong options could write other things in the field cuisine, in order to make it against this preference."
+                ],
+                [
+                    "restaurant",
+                    "rating",
+                    "prefer having more than half of the reviews are 5-star",
+                    "I usually scroll pass all those restaurants where five star review is not taking absolute advantage over others.",
+                    "Correct options should have more than half of all the reviews are 5 star. Wrong options could be wrong against this preference by giving much less 5 star ratings than user expect."
+                ],
+                [
+                    "restaurant",
+                    "tags",
+                    "prefer restaurant opens till late night",
+                    "Best conversations often happen over a meal after 10 PM, and that's why I like late night meals usually.",
+                    "Correct options should have Late Night Service available and listed in the tags. Wrong options could be wrong against this preference by do not contain Late Night Service in the tags."
+                ]
+            ],
+            "arguments": {
+                "city": "San Francisco",
+                "date": "December 16th"
+            },
+            "all_ids": [
+                "R15",
+                "R5",
+                "R4",
+                "R21",
+                "R16",
+                "R3",
+                "R18",
+                "R12",
+                "R6",
+                "R7",
+                "R11",
+                "R20",
+                "R14",
+                "R13",
+                "R19",
+                "R10",
+                "R22",
+                "R1",
+                "R9",
+                "R2",
+                "R8",
+                "R17"
+            ],
+            "correct_ids": [
+                "R4",
+                "R12",
+                "R20"
+            ],
+            "wrong_ids": [
+                "R11",
+                "R5",
+                "R19",
+                "R17",
+                "R6",
+                "R13",
+                "R9",
+                "R8",
+                "R10",
+                "R2"
+            ],
+            "noise_ids": [
+                "R7",
+                "R1",
+                "R14",
+                "R21",
+                "R18",
+                "R15",
+                "R16",
+                "R3",
+                "R22"
+            ],
+            "best_id": "R20",
+            "best_id_thought": "To determine the option with the lowest cost, we need to consider the 'expectation' attribute of each restaurant, which indicates the general cost level. The options are 'Normal', 'Expensive', and 'Cheap'. All options satisfy the user's preferences for vegetarian cuisine, majority 5-star reviews, and late-night service. Therefore, the cost is the only differentiating factor. \n\n1. Green Plate Caf\u00e9 has a 'Normal' cost expectation. \n2. Herbivore's Haven has an 'Expensive' cost expectation. \n3. The Veggie Table has a 'Cheap' cost expectation. \n\nGiven these cost expectations, The Veggie Table is the option with the lowest cost, as it is labeled 'Cheap'. Therefore, the ID of the option with the lowest cost is 'R20'.",
+            "options": {
+                "correct": [
+                    {
+                        "name": "Green Plate Caf\u00e9",
+                        "cuisine": "Vegetarian",
+                        "expectation": "Normal",
+                        "rating": 9,
+                        "reviews": {
+                            "5_star": 300,
+                            "4_star": 150,
+                            "3_star": 30,
+                            "2_star": 10,
+                            "1_star": 10
+                        },
+                        "tags": [
+                            "Late Night Service",
+                            "Outdoor Seating",
+                            "Reservations Available"
+                        ],
+                        "id": "R4"
+                    },
+                    {
+                        "name": "Herbivore's Haven",
+                        "cuisine": "Vegetarian",
+                        "expectation": "Expensive",
+                        "rating": 8,
+                        "reviews": {
+                            "5_star": 260,
+                            "4_star": 100,
+                            "3_star": 20,
+                            "2_star": 10,
+                            "1_star": 10
+                        },
+                        "tags": [
+                            "Late Night Service",
+                            "Business Dining",
+                            "Parking"
+                        ],
+                        "id": "R12"
+                    },
+                    {
+                        "name": "The Veggie Table",
+                        "cuisine": "Vegetarian",
+                        "expectation": "Cheap",
+                        "rating": 8,
+                        "reviews": {
+                            "5_star": 210,
+                            "4_star": 80,
+                            "3_star": 10,
+                            "2_star": 5,
+                            "1_star": 5
+                        },
+                        "tags": [
+                            "Late Night Service",
+                            "Pet-Friendly",
+                            "Walk-ins Welcomed"
+                        ],
+                        "id": "R20"
+                    }
+                ],
+                "wrong": [
+                    {
+                        "name": "The French Table",
+                        "cuisine": "French",
+                        "expectation": "Expensive",
+                        "rating": 8,
+                        "reviews": {
+                            "5_star": 20,
+                            "4_star": 25,
+                            "3_star": 15,
+                            "2_star": 5,
+                            "1_star": 5
+                        },
+                        "tags": [
+                            "Outdoor Seating",
+                            "Reservations Available"
+                        ],
+                        "id": "R11"
+                    },
+                    {
+                        "name": "Pizza Corner",
+                        "cuisine": "Italian",
+                        "expectation": "Normal",
+                        "rating": 7,
+                        "reviews": {
+                            "5_star": 15,
+                            "4_star": 15,
+                            "3_star": 15,
+                            "2_star": 10,
+                            "1_star": 5
+                        },
+                        "tags": [
+                            "Delivery Available",
+                            "Outdoor Seating"
+                        ],
+                        "id": "R2"
+                    },
+                    {
+                        "name": "Curry Palace",
+                        "cuisine": "Indian",
+                        "expectation": "Normal",
+                        "rating": 9,
+                        "reviews": {
+                            "5_star": 25,
+                            "4_star": 20,
+                            "3_star": 15,
+                            "2_star": 5,
+                            "1_star": 5
+                        },
+                        "tags": [
+                            "Reservations Available",
+                            "Business Dining"
+                        ],
+                        "id": "R10"
+                    },
+                    {
+                        "name": "Noodle House",
+                        "cuisine": "Chinese",
+                        "expectation": "Normal",
+                        "rating": 7,
+                        "reviews": {
+                            "5_star": 15,
+                            "4_star": 20,
+                            "3_star": 10,
+                            "2_star": 3,
+                            "1_star": 2
+                        },
+                        "tags": [
+                            "Parking",
+                            "Delivery Available"
+                        ],
+                        "id": "R5"
+                    },
+                    {
+                        "name": "Bistro Paris",
+                        "cuisine": "French",
+                        "expectation": "Normal",
+                        "rating": 7,
+                        "reviews": {
+                            "5_star": 12,
+                            "4_star": 18,
+                            "3_star": 10,
+                            "2_star": 8,
+                            "1_star": 2
+                        },
+                        "tags": [
+                            "Outdoor Seating",
+                            "Reservations Available"
+                        ],
+                        "id": "R13"
+                    },
+                    {
+                        "name": "Meat Lovers' Grill",
+                        "cuisine": "Steakhouse",
+                        "expectation": "Expensive",
+                        "rating": 8,
+                        "reviews": {
+                            "5_star": 18,
+                            "4_star": 12,
+                            "3_star": 15,
+                            "2_star": 10,
+                            "1_star": 5
+                        },
+                        "tags": [
+                            "Reservations Available",
+                            "Walk-ins Welcomed"
+                        ],
+                        "id": "R17"
+                    },
+                    {
+                        "name": "Taco Fiesta",
+                        "cuisine": "Mexican",
+                        "expectation": "Cheap",
+                        "rating": 6,
+                        "reviews": {
+                            "5_star": 10,
+                            "4_star": 15,
+                            "3_star": 10,
+                            "2_star": 5,
+                            "1_star": 10
+                        },
+                        "tags": [
+                            "Outdoor Seating",
+                            "Pet-Friendly"
+                        ],
+                        "id": "R6"
+                    },
+                    {
+                        "name": "Burger Joint",
+                        "cuisine": "Fast Food",
+                        "expectation": "Cheap",
+                        "rating": 5,
+                        "reviews": {
+                            "5_star": 5,
+                            "4_star": 10,
+                            "3_star": 20,
+                            "2_star": 15,
+                            "1_star": 10
+                        },
+                        "tags": [
+                            "Parking",
+                            "Walk-ins Welcomed"
+                        ],
+                        "id": "R9"
+                    },
+                    {
+                        "name": "Sushi World",
+                        "cuisine": "Japanese",
+                        "expectation": "Expensive",
+                        "rating": 9,
+                        "reviews": {
+                            "5_star": 30,
+                            "4_star": 15,
+                            "3_star": 10,
+                            "2_star": 5,
+                            "1_star": 0
+                        },
+                        "tags": [
+                            "Reservations Available",
+                            "Business Dining"
+                        ],
+                        "id": "R19"
+                    },
+                    {
+                        "name": "Wok & Roll",
+                        "cuisine": "Chinese",
+                        "expectation": "Normal",
+                        "rating": 8,
+                        "reviews": {
+                            "5_star": 20,
+                            "4_star": 30,
+                            "3_star": 5,
+                            "2_star": 2,
+                            "1_star": 3
+                        },
+                        "tags": [
+                            "Delivery Available",
+                            "Parking"
+                        ],
+                        "id": "R8"
+                    }
+                ],
+                "noise": [
+                    {
+                        "name": "Mystic Pizza Portal",
+                        "cuisine": "Italian",
+                        "rating": 10,
+                        "reviews": {
+                            "5_star": 1000,
+                            "4_star": 0,
+                            "3_star": 0,
+                            "2_star": 0,
+                            "1_star": 0
+                        },
+                        "tags": [
+                            "Parking",
+                            "Walk-ins Welcomed"
+                        ],
+                        "id": "R18"
+                    },
+                    {
+                        "name": "The Eternal Sausage",
+                        "cuisine": "German",
+                        "rating": 4,
+                        "reviews": {
+                            "5_star": 5,
+                            "4_star": 10,
+                            "3_star": 15,
+                            "2_star": 20,
+                            "1_star": 25
+                        },
+                        "tags": [
+                            "Reservations Available",
+                            "Business Dining"
+                        ],
+                        "id": "R21"
+                    },
+                    {
+                        "name": "Galactic Burger Realm",
+                        "cuisine": "Fast Food",
+                        "rating": 3,
+                        "reviews": {
+                            "5_star": 1,
+                            "4_star": 5,
+                            "3_star": 10,
+                            "2_star": 20,
+                            "1_star": 50
+                        },
+                        "tags": [
+                            "Delivery Available",
+                            "Walk-ins Welcomed"
+                        ],
+                        "id": "R14"
+                    },
+                    {
+                        "name": "Moonlit Kangaroo Cafe",
+                        "cuisine": "Australian",
+                        "rating": 2,
+                        "reviews": {
+                            "5_star": 2,
+                            "4_star": 3,
+                            "3_star": 5,
+                            "2_star": 10,
+                            "1_star": 20
+                        },
+                        "tags": [
+                            "Pet-Friendly",
+                            "Parking"
+                        ],
+                        "id": "R7"
+                    },
+                    {
+                        "name": "Cosmic Sushi & Stars",
+                        "cuisine": "Japanese",
+                        "rating": 1,
+                        "reviews": {
+                            "5_star": 0,
+                            "4_star": 2,
+                            "3_star": 3,
+                            "2_star": 7,
+                            "1_star": 30
+                        },
+                        "tags": [
+                            "Outdoor Seating",
+                            "Business Dining"
+                        ],
+                        "id": "R1"
+                    }
+                ]
+            }
+        },
+        "initial_description": "I need a rental car in San Francisco from December 15th to December 20th and a restaurant reservation in San Francisco on December 16th."
+    },
+    "all_options": {
+        "rental_car": [
+            {
+                "brand": "BMW",
+                "model": "BMW X3",
+                "categories": "SUV",
+                "seats": 5,
+                "cost": 600,
+                "insurance": {
+                    "cost_damage_waiver": 55,
+                    "cost_liability_waiver": 35,
+                    "cost_personal_accident_waiver": 30,
+                    "cost_belonging_waiver": null
+                },
+                "service": {
+                    "cost_child_seat_total": 25,
+                    "cost_underage_total": null,
+                    "cost_additional_driver_total": 30
+                },
+                "id": "C21"
+            },
+            {
+                "brand": "Tesla",
+                "model": "Model 3",
+                "categories": "Electric",
+                "seats": 5,
+                "cost": 700,
+                "insurance": {
+                    "cost_damage_waiver": 170,
+                    "cost_liability_waiver": 120,
+                    "cost_personal_accident_waiver": 60,
+                    "cost_belonging_waiver": 85
+                },
+                "service": {
+                    "cost_child_seat_total": 40,
+                    "cost_underage_total": null,
+                    "cost_additional_driver_total": 60
+                },
+                "id": "C17"
+            },
+            {
+                "brand": "Hyundai",
+                "model": "Hyundai Sonata",
+                "categories": "Economy",
+                "seats": 5,
+                "cost": 390,
+                "insurance": {
+                    "cost_damage_waiver": 35,
+                    "cost_liability_waiver": 25,
+                    "cost_personal_accident_waiver": null,
+                    "cost_belonging_waiver": null
+                },
+                "service": {
+                    "cost_child_seat_total": 20,
+                    "cost_underage_total": null,
+                    "cost_additional_driver_total": null
+                },
+                "id": "C12"
+            },
+            {
+                "brand": "Oceanic Rentals",
+                "model": "Submarine Explorer",
+                "categories": "Electric",
+                "seats": 10,
+                "cost": 200000,
+                "insurance": {
+                    "cost_damage_waiver": 10000,
+                    "cost_liability_waiver": 5000,
+                    "cost_personal_accident_waiver": 3000,
+                    "cost_belonging_waiver": 5000
+                },
+                "service": {
+                    "cost_child_seat_total": 500,
+                    "cost_underage_total": 2000,
+                    "cost_additional_driver_total": 1500
+                },
+                "id": "C16"
+            },
+            {
+                "brand": "Tesla",
+                "model": "Model 3",
+                "categories": "Electric",
+                "seats": 5,
+                "cost": 650,
+                "insurance": {
+                    "cost_damage_waiver": 160,
+                    "cost_liability_waiver": 110,
+                    "cost_personal_accident_waiver": 55,
+                    "cost_belonging_waiver": 80
+                },
+                "service": {
+                    "cost_child_seat_total": 35,
+                    "cost_underage_total": null,
+                    "cost_additional_driver_total": 55
+                },
+                "id": "C22"
+            },
+            {
+                "brand": "Chevrolet",
+                "model": "Chevrolet Bolt",
+                "categories": "Electric",
+                "seats": 5,
+                "cost": 500,
+                "insurance": {
+                    "cost_damage_waiver": 40,
+                    "cost_liability_waiver": 35,
+                    "cost_personal_accident_waiver": null,
+                    "cost_belonging_waiver": 20
+                },
+                "service": {
+                    "cost_child_seat_total": null,
+                    "cost_underage_total": null,
+                    "cost_additional_driver_total": 20
+                },
+                "id": "C15"
+            },
+            {
+                "brand": "Galactic Cruises",
+                "model": "Starship Enterprise",
+                "categories": "Electric",
+                "seats": 500,
+                "cost": 1000000,
+                "insurance": {
+                    "cost_damage_waiver": 50000,
+                    "cost_liability_waiver": 20000,
+                    "cost_personal_accident_waiver": 15000,
+                    "cost_belonging_waiver": 10000
+                },
+                "service": {
+                    "cost_child_seat_total": 1000,
+                    "cost_underage_total": 5000,
+                    "cost_additional_driver_total": 3000
+                },
+                "id": "C4"
+            },
+            {
+                "brand": "Nissan",
+                "model": "Nissan Altima",
+                "categories": "Gasoline",
+                "seats": 5,
+                "cost": 420,
+                "insurance": {
+                    "cost_damage_waiver": 50,
+                    "cost_liability_waiver": 30,
+                    "cost_personal_accident_waiver": 20,
+                    "cost_belonging_waiver": null
+                },
+                "service": {
+                    "cost_child_seat_total": 20,
+                    "cost_underage_total": null,
+                    "cost_additional_driver_total": null
+                },
+                "id": "C3"
+            },
+            {
+                "brand": "Audi",
+                "model": "Audi A4",
+                "categories": "Economy",
+                "seats": 5,
+                "cost": 550,
+                "insurance": {
+                    "cost_damage_waiver": 50,
+                    "cost_liability_waiver": 30,
+                    "cost_personal_accident_waiver": 20,
+                    "cost_belonging_waiver": null
+                },
+                "service": {
+                    "cost_child_seat_total": null,
+                    "cost_underage_total": 25,
+                    "cost_additional_driver_total": null
+                },
+                "id": "C2"
+            },
+            {
+                "brand": "Mercedes-Benz",
+                "model": "Mercedes-Benz C-Class",
+                "categories": "Gasoline",
+                "seats": 5,
+                "cost": 700,
+                "insurance": {
+                    "cost_damage_waiver": 65,
+                    "cost_liability_waiver": 45,
+                    "cost_personal_accident_waiver": 40,
+                    "cost_belonging_waiver": null
+                },
+                "service": {
+                    "cost_child_seat_total": 30,
+                    "cost_underage_total": null,
+                    "cost_additional_driver_total": 50
+                },
+                "id": "C7"
+            },
+            {
+                "brand": "Toyota",
+                "model": "Toyota Prius",
+                "categories": "Gasoline",
+                "seats": 5,
+                "cost": 480,
+                "insurance": {
+                    "cost_damage_waiver": 45,
+                    "cost_liability_waiver": 30,
+                    "cost_personal_accident_waiver": 25,
+                    "cost_belonging_waiver": 15
+                },
+                "service": {
+                    "cost_child_seat_total": null,
+                    "cost_underage_total": 20,
+                    "cost_additional_driver_total": null
+                },
+                "id": "C13"
+            },
+            {
+                "brand": "Time Travel Rentals",
+                "model": "DeLorean Time Machine",
+                "categories": "Gasoline",
+                "seats": 2,
+                "cost": 1500000,
+                "insurance": {
+                    "cost_damage_waiver": 100000,
+                    "cost_liability_waiver": 50000,
+                    "cost_personal_accident_waiver": 30000,
+                    "cost_belonging_waiver": 20000
+                },
+                "service": {
+                    "cost_child_seat_total": 10000,
+                    "cost_underage_total": 5000,
+                    "cost_additional_driver_total": 3000
+                },
+                "id": "C6"
+            },
+            {
+                "brand": "Knight Rides",
+                "model": "Medieval Horse Carriage",
+                "categories": "Gasoline",
+                "seats": 2,
+                "cost": 500,
+                "insurance": {
+                    "cost_damage_waiver": null,
+                    "cost_liability_waiver": null,
+                    "cost_personal_accident_waiver": null,
+                    "cost_belonging_waiver": null
+                },
+                "service": {
+                    "cost_child_seat_total": null,
+                    "cost_underage_total": null,
+                    "cost_additional_driver_total": null
+                },
+                "id": "C14"
+            },
+            {
+                "brand": "Honda",
+                "model": "Honda Civic",
+                "categories": "Economy",
+                "seats": 5,
+                "cost": 400,
+                "insurance": {
+                    "cost_damage_waiver": 40,
+                    "cost_liability_waiver": 25,
+                    "cost_personal_accident_waiver": null,
+                    "cost_belonging_waiver": null
+                },
+                "service": {
+                    "cost_child_seat_total": 15,
+                    "cost_underage_total": null,
+                    "cost_additional_driver_total": 25
+                },
+                "id": "C5"
+            },
+            {
+                "brand": "Fantasy Flights",
+                "model": "Magic Carpet",
+                "categories": "Gasoline",
+                "seats": 4,
+                "cost": 75000,
+                "insurance": {
+                    "cost_damage_waiver": 3000,
+                    "cost_liability_waiver": 1000,
+                    "cost_personal_accident_waiver": 500,
+                    "cost_belonging_waiver": 200
+                },
+                "service": {
+                    "cost_child_seat_total": 200,
+                    "cost_underage_total": 1000,
+                    "cost_additional_driver_total": 750
+                },
+                "id": "C20"
+            },
+            {
+                "brand": "Tesla",
+                "model": "Model 3",
+                "categories": "Electric",
+                "seats": 5,
+                "cost": 600,
+                "insurance": {
+                    "cost_damage_waiver": 150,
+                    "cost_liability_waiver": 100,
+                    "cost_personal_accident_waiver": 50,
+                    "cost_belonging_waiver": 75
+                },
+                "service": {
+                    "cost_child_seat_total": 30,
+                    "cost_underage_total": null,
+                    "cost_additional_driver_total": 50
+                },
+                "id": "C18"
+            },
+            {
+                "brand": "Kia",
+                "model": "Kia Sorento",
+                "categories": "SUV",
+                "seats": 7,
+                "cost": 650,
+                "insurance": {
+                    "cost_damage_waiver": 60,
+                    "cost_liability_waiver": 40,
+                    "cost_personal_accident_waiver": 35,
+                    "cost_belonging_waiver": null
+                },
+                "service": {
+                    "cost_child_seat_total": null,
+                    "cost_underage_total": 30,
+                    "cost_additional_driver_total": null
+                },
+                "id": "C1"
+            },
+            {
+                "brand": "Ford",
+                "model": "Ford Mustang",
+                "categories": "Economy",
+                "seats": 4,
+                "cost": 450,
+                "insurance": {
+                    "cost_damage_waiver": 50,
+                    "cost_liability_waiver": 30,
+                    "cost_personal_accident_waiver": 20,
+                    "cost_belonging_waiver": null
+                },
+                "service": {
+                    "cost_child_seat_total": 30,
+                    "cost_underage_total": 50,
+                    "cost_additional_driver_total": 25
+                },
+                "id": "C9"
+            }
+        ],
+        "restaurant": [
+            {
+                "name": "Bistro Paris",
+                "cuisine": "French",
+                "expectation": "Normal",
+                "rating": 7,
+                "reviews": {
+                    "5_star": 12,
+                    "4_star": 18,
+                    "3_star": 10,
+                    "2_star": 8,
+                    "1_star": 2
+                },
+                "tags": [
+                    "Outdoor Seating",
+                    "Reservations Available"
+                ],
+                "id": "R13"
+            },
+            {
+                "name": "Wok & Roll",
+                "cuisine": "Chinese",
+                "expectation": "Normal",
+                "rating": 8,
+                "reviews": {
+                    "5_star": 20,
+                    "4_star": 30,
+                    "3_star": 5,
+                    "2_star": 2,
+                    "1_star": 3
+                },
+                "tags": [
+                    "Delivery Available",
+                    "Parking"
+                ],
+                "id": "R8"
+            },
+            {
+                "name": "Green Plate Caf\u00e9",
+                "cuisine": "Vegetarian",
+                "expectation": "Normal",
+                "rating": 9,
+                "reviews": {
+                    "5_star": 300,
+                    "4_star": 150,
+                    "3_star": 30,
+                    "2_star": 10,
+                    "1_star": 10
+                },
+                "tags": [
+                    "Late Night Service",
+                    "Outdoor Seating",
+                    "Reservations Available"
+                ],
+                "id": "R4"
+            },
+            {
+                "name": "The Eternal Sausage",
+                "cuisine": "German",
+                "rating": 4,
+                "reviews": {
+                    "5_star": 5,
+                    "4_star": 10,
+                    "3_star": 15,
+                    "2_star": 20,
+                    "1_star": 25
+                },
+                "tags": [
+                    "Reservations Available",
+                    "Business Dining"
+                ],
+                "id": "R21"
+            },
+            {
+                "name": "Taco Fiesta",
+                "cuisine": "Mexican",
+                "expectation": "Cheap",
+                "rating": 6,
+                "reviews": {
+                    "5_star": 10,
+                    "4_star": 15,
+                    "3_star": 10,
+                    "2_star": 5,
+                    "1_star": 10
+                },
+                "tags": [
+                    "Outdoor Seating",
+                    "Pet-Friendly"
+                ],
+                "id": "R6"
+            },
+            {
+                "name": "The Veggie Table",
+                "cuisine": "Vegetarian",
+                "expectation": "Cheap",
+                "rating": 8,
+                "reviews": {
+                    "5_star": 210,
+                    "4_star": 80,
+                    "3_star": 10,
+                    "2_star": 5,
+                    "1_star": 5
+                },
+                "tags": [
+                    "Late Night Service",
+                    "Pet-Friendly",
+                    "Walk-ins Welcomed"
+                ],
+                "id": "R20"
+            },
+            {
+                "name": "Curry Palace",
+                "cuisine": "Indian",
+                "expectation": "Normal",
+                "rating": 9,
+                "reviews": {
+                    "5_star": 25,
+                    "4_star": 20,
+                    "3_star": 15,
+                    "2_star": 5,
+                    "1_star": 5
+                },
+                "tags": [
+                    "Reservations Available",
+                    "Business Dining"
+                ],
+                "id": "R10"
+            },
+            {
+                "name": "The French Table",
+                "cuisine": "French",
+                "expectation": "Expensive",
+                "rating": 8,
+                "reviews": {
+                    "5_star": 20,
+                    "4_star": 25,
+                    "3_star": 15,
+                    "2_star": 5,
+                    "1_star": 5
+                },
+                "tags": [
+                    "Outdoor Seating",
+                    "Reservations Available"
+                ],
+                "id": "R11"
+            },
+            {
+                "name": "Cosmic Sushi & Stars",
+                "cuisine": "Japanese",
+                "rating": 1,
+                "reviews": {
+                    "5_star": 0,
+                    "4_star": 2,
+                    "3_star": 3,
+                    "2_star": 7,
+                    "1_star": 30
+                },
+                "tags": [
+                    "Outdoor Seating",
+                    "Business Dining"
+                ],
+                "id": "R1"
+            },
+            {
+                "name": "Meat Lovers' Grill",
+                "cuisine": "Steakhouse",
+                "expectation": "Expensive",
+                "rating": 8,
+                "reviews": {
+                    "5_star": 18,
+                    "4_star": 12,
+                    "3_star": 15,
+                    "2_star": 10,
+                    "1_star": 5
+                },
+                "tags": [
+                    "Reservations Available",
+                    "Walk-ins Welcomed"
+                ],
+                "id": "R17"
+            },
+            {
+                "name": "Moonlit Kangaroo Cafe",
+                "cuisine": "Australian",
+                "rating": 2,
+                "reviews": {
+                    "5_star": 2,
+                    "4_star": 3,
+                    "3_star": 5,
+                    "2_star": 10,
+                    "1_star": 20
+                },
+                "tags": [
+                    "Pet-Friendly",
+                    "Parking"
+                ],
+                "id": "R7"
+            },
+            {
+                "name": "Sushi World",
+                "cuisine": "Japanese",
+                "expectation": "Expensive",
+                "rating": 9,
+                "reviews": {
+                    "5_star": 30,
+                    "4_star": 15,
+                    "3_star": 10,
+                    "2_star": 5,
+                    "1_star": 0
+                },
+                "tags": [
+                    "Reservations Available",
+                    "Business Dining"
+                ],
+                "id": "R19"
+            },
+            {
+                "name": "Mystic Pizza Portal",
+                "cuisine": "Italian",
+                "rating": 10,
+                "reviews": {
+                    "5_star": 1000,
+                    "4_star": 0,
+                    "3_star": 0,
+                    "2_star": 0,
+                    "1_star": 0
+                },
+                "tags": [
+                    "Parking",
+                    "Walk-ins Welcomed"
+                ],
+                "id": "R18"
+            },
+            {
+                "name": "Galactic Burger Realm",
+                "cuisine": "Fast Food",
+                "rating": 3,
+                "reviews": {
+                    "5_star": 1,
+                    "4_star": 5,
+                    "3_star": 10,
+                    "2_star": 20,
+                    "1_star": 50
+                },
+                "tags": [
+                    "Delivery Available",
+                    "Walk-ins Welcomed"
+                ],
+                "id": "R14"
+            },
+            {
+                "name": "Pizza Corner",
+                "cuisine": "Italian",
+                "expectation": "Normal",
+                "rating": 7,
+                "reviews": {
+                    "5_star": 15,
+                    "4_star": 15,
+                    "3_star": 15,
+                    "2_star": 10,
+                    "1_star": 5
+                },
+                "tags": [
+                    "Delivery Available",
+                    "Outdoor Seating"
+                ],
+                "id": "R2"
+            },
+            {
+                "name": "Herbivore's Haven",
+                "cuisine": "Vegetarian",
+                "expectation": "Expensive",
+                "rating": 8,
+                "reviews": {
+                    "5_star": 260,
+                    "4_star": 100,
+                    "3_star": 20,
+                    "2_star": 10,
+                    "1_star": 10
+                },
+                "tags": [
+                    "Late Night Service",
+                    "Business Dining",
+                    "Parking"
+                ],
+                "id": "R12"
+            },
+            {
+                "name": "Burger Joint",
+                "cuisine": "Fast Food",
+                "expectation": "Cheap",
+                "rating": 5,
+                "reviews": {
+                    "5_star": 5,
+                    "4_star": 10,
+                    "3_star": 20,
+                    "2_star": 15,
+                    "1_star": 10
+                },
+                "tags": [
+                    "Parking",
+                    "Walk-ins Welcomed"
+                ],
+                "id": "R9"
+            },
+            {
+                "name": "Noodle House",
+                "cuisine": "Chinese",
+                "expectation": "Normal",
+                "rating": 7,
+                "reviews": {
+                    "5_star": 15,
+                    "4_star": 20,
+                    "3_star": 10,
+                    "2_star": 3,
+                    "1_star": 2
+                },
+                "tags": [
+                    "Parking",
+                    "Delivery Available"
+                ],
+                "id": "R5"
+            }
+        ]
+    },
+    "arguments": {
+        "rental_car": {
+            "city": "San Francisco",
+            "date_start": "December 15th",
+            "date_end": "December 20th"
+        },
+        "restaurant": {
+            "city": "San Francisco",
+            "date": "December 16th"
+        }
+    }
+}

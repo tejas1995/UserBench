@@ -14,6 +14,12 @@ import asyncio
 import json
 
 from .prompts import evaluate_action
+from .action_parser import (
+    parse_action,
+    perform_search,
+    build_search_feedback,
+    ActionParseError,
+)
 from .prompt_async import async_evaluate_action
 from .task_data import load_tasks, get_task_by_id
 from ..config import TravelGymConfig, get_default_config
@@ -101,7 +107,7 @@ class TravelEnv(gym.Env):
             self.current_task_index = (self.current_task_index + 1) % len(self.tasks)
             return task
     
-    def reset(self, *, seed=None, options=None) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+    def reset(self, *, task_index=None, seed=None, options=None) -> Tuple[Dict[str, Any], Dict[str, Any]]:
         """
         Reset the environment to start a new episode.
         
@@ -124,7 +130,11 @@ class TravelEnv(gym.Env):
         self.elicited_preferences = []
         
         # Select task based on configuration
-        self.current_task = self._get_next_task()
+        if task_index is not None:
+            self.current_task_index = task_index
+            self.current_task = self.tasks[task_index]
+        else:
+            self.current_task = self._get_next_task()
         
         # Process task data and initialize preferences
         self._initialize_preferences()
@@ -242,6 +252,47 @@ class TravelEnv(gym.Env):
         """Clean up the environment."""
         pass
 
+    def _handle_local_search(self, action: str, state_config: Dict[str, Any]) -> Tuple[str, float] | None:
+        parsed = parse_action(action)
+        if parsed is None:
+            return None
+
+        try:
+            self.state_list["search_times"] += 1
+            if self.state_list["search_times"] % state_config["search_failure_interval"] == 0:
+                raise Exception("Simulate a system error")
+
+            dimension, options, unknown_args = perform_search(self.current_task, parsed)
+            if dimension in self.state_list["search_arguments"]:
+                # self.state_list["search_arguments"].remove(dimension)
+                feedback = build_search_feedback(dimension, options, parsed.args, unknown_args)
+                self.conversation_history.append({"role": "agent", "content": action})
+                self.conversation_history.append(
+                    {"role": "database", "content": feedback.split("\n")[0] + " ... (skip detailed results here) ..."}
+                )
+                return feedback, state_config["search_correct_reward"]
+
+            feedback = (
+                f"You have provided the correct search request arguments. However, "
+                f"you have already got the search results for <{dimension}> in previous search attempts. "
+                "Please directly refer to the previous search results."
+            )
+            self.conversation_history.append({"role": "agent", "content": action})
+            self.conversation_history.append({"role": "database", "content": feedback})
+            return feedback, 0.0
+        except ActionParseError as exc:
+            feedback = f"Invalid search action format: {exc}"
+        except Exception as exc:
+            if "Simulate a system error" in str(exc):
+                print("[TravelGym - Local Search] Normally simulate a system error")
+            else:
+                print(f"[TravelGym - Local Search] {exc}; By default will return error message")
+            feedback = "Currently the searching backend is experiencing some issues. Please try again later."
+
+        self.conversation_history.append({"role": "agent", "content": action})
+        self.conversation_history.append({"role": "database", "content": feedback})
+        return feedback, 0.0
+
     def step(self, action_input: str) -> Tuple[Dict[str, Any], float, bool, bool, Dict[str, Any]]:
         """Execute one step in the environment."""
         if self.episode_complete:
@@ -262,7 +313,7 @@ class TravelEnv(gym.Env):
             observation = {
                 "task_description": self.current_task.get("scenario", ""),
                 "goal": "Elicit travel preferences and provide appropriate recommendations.",
-                "feedback": f"Session ended. You elicited {len(self.elicited_preferences)}/{len(self.remaining_preferences) + len(self.elicited_preferences)} preferences. Final elicitation ratio: {self._calculate_elicitation_ratio():.2%}",
+                "feedback": "Session ended.",  # You elicited {len(self.elicited_preferences)} preferences.",
                 "step_count": self.step_count,
                 "episode_complete": self.episode_complete,
                 "total_preferences": len(self.remaining_preferences) + len(self.elicited_preferences),
@@ -304,11 +355,16 @@ class TravelEnv(gym.Env):
             "one_choice_per_aspect": self.config.one_choice_per_aspect,
         }
         
-        # Evaluate the action using LLM
-        response, elicited_preference_ids, reward = evaluate_action(
-            action, self.current_task, state_config, model_config, 
-            self.conversation_history, self.remaining_preferences, self.state_list
-        )
+        local_search_result = self._handle_local_search(action, state_config)
+        if local_search_result is not None:
+            response, reward = local_search_result
+            elicited_preference_ids = []
+        else:
+            # Evaluate the action using LLM
+            response, elicited_preference_ids, reward = evaluate_action(
+                action, self.current_task, state_config, model_config, 
+                self.conversation_history, self.remaining_preferences, self.state_list
+            )
         
         # Process elicited preferences and calculate reward
         newly_elicited_preferences = []
@@ -398,7 +454,7 @@ class TravelEnv(gym.Env):
             observation = {
                 "task_description": self.current_task.get("scenario", ""),
                 "goal": "Elicit travel preferences and provide appropriate recommendations.",
-                "feedback": f"Session ended. You elicited {len(self.elicited_preferences)}/{len(self.remaining_preferences) + len(self.elicited_preferences)} preferences. Final elicitation ratio: {self._calculate_elicitation_ratio():.2%}",
+                "feedback": "Session ended.",  # You elicited {len(self.elicited_preferences)} preferences.",
                 "step_count": self.step_count,
                 "episode_complete": self.episode_complete,
                 "total_preferences": len(self.remaining_preferences) + len(self.elicited_preferences),
@@ -440,11 +496,16 @@ class TravelEnv(gym.Env):
             "one_choice_per_aspect": self.config.one_choice_per_aspect,
         }
         
-        # Evaluate the action using async LLM
-        response, elicited_preference_ids, reward = await async_evaluate_action(
-            action, self.current_task, state_config, model_config, 
-            self.conversation_history, self.remaining_preferences, self.state_list
-        )
+        local_search_result = self._handle_local_search(action, state_config)
+        if local_search_result is not None:
+            response, reward = local_search_result
+            elicited_preference_ids = []
+        else:
+            # Evaluate the action using async LLM
+            response, elicited_preference_ids, reward = await async_evaluate_action(
+                action, self.current_task, state_config, model_config, 
+                self.conversation_history, self.remaining_preferences, self.state_list
+            )
         
         # Process elicited preferences and calculate reward
         newly_elicited_preferences = []

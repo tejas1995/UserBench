@@ -44,6 +44,7 @@ def model_call(
             try_time += 1
             if try_time >= 3:
                 return None
+            import pdb; pdb.set_trace()
             time.sleep(2)
     return None
 

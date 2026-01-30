@@ -1,0 +1,3163 @@
+{
+    "id": "flight:3-199|hotel:4-13|restaurant:3-224",
+    "scenario": "I am planning a trip to New York City from December 10th to December 15th. I will be flying with China Airline on December 10th, as I appreciate their consistent smooth landing experiences and the meal service they provide aligns perfectly with my flight schedule. I also plan to have a layover long enough to catch up with a friend over coffee, but not so long that it becomes tedious. Upon arrival, I will be staying at a Hyatt hotel from December 10th to December 15th. I've heard their loyalty program offers amazing perks, and I am looking forward to enjoying the city view from my room at night. My colleague will be joining me, so a double room is essential for our comfort and privacy. I specifically look for hotels rated between 7 and 9, as they offer a great mix of value and comfort. During my stay, I plan to explore some of New York City's fast food spots. I prefer places where more than half of the reviews are five-star, as it assures me of a quality experience. Additionally, I enjoy outdoor seating options so I can relax and have a smoke or vape after my meal without disturbing others.",
+    "category": "travel_planning",
+    "dimensions": [
+        "restaurant",
+        "flight",
+        "hotel"
+    ],
+    "wanted_num": [
+        3,
+        3,
+        4
+    ],
+    "initial_desc": "I need a one-way flight from Los Angeles to New York City on December 10th, a hotel in New York City from December 10th to December 15th, and a restaurant in New York City on December 11th.",
+    "preferences": {
+        "scenario": "I am planning a trip to New York City from December 10th to December 15th. I will be flying with China Airline on December 10th, as I appreciate their consistent smooth landing experiences and the meal service they provide aligns perfectly with my flight schedule. I also plan to have a layover long enough to catch up with a friend over coffee, but not so long that it becomes tedious. Upon arrival, I will be staying at a Hyatt hotel from December 10th to December 15th. I've heard their loyalty program offers amazing perks, and I am looking forward to enjoying the city view from my room at night. My colleague will be joining me, so a double room is essential for our comfort and privacy. I specifically look for hotels rated between 7 and 9, as they offer a great mix of value and comfort. During my stay, I plan to explore some of New York City's fast food spots. I prefer places where more than half of the reviews are five-star, as it assures me of a quality experience. Additionally, I enjoy outdoor seating options so I can relax and have a smoke or vape after my meal without disturbing others.",
+        "wanted_num": [
+            3,
+            3,
+            4
+        ],
+        "difficulty": "hard",
+        "dimensions": [
+            "restaurant",
+            "flight",
+            "hotel"
+        ],
+        "restaurant": {
+            "preferences": [
+                [
+                    "restaurant",
+                    "cuisine",
+                    "prefer having fast food",
+                    "I just want to grab something tasty on the go without all the fuss.",
+                    "Correct options should write Fast Food in the cuisine field. Wrong options could write other things in the field cuisine, in order to make it against this preference."
+                ],
+                [
+                    "restaurant",
+                    "rating",
+                    "prefer having more than half of the reviews are 5-star",
+                    "I find it compelling when a restaurant's five star positive reviews overwhelmingly dominate the others and takes the majority.",
+                    "Correct options should have more than half of all the reviews are 5 star. Wrong options could be wrong against this preference by giving much less 5 star ratings than user expect."
+                ],
+                [
+                    "restaurant",
+                    "tags",
+                    "prefer having outdoor seating",
+                    "I like having the option to smoke or vape a little after my meal, so outdoor seats in a restaurant would be better as I won't disturb others this way.",
+                    "Correct options should have Outdoor Seating available and listed in the tags. Wrong options could be wrong against this preference by do not contain Outdoor Seating in the tags."
+                ]
+            ],
+            "arguments": {
+                "city": "New York City",
+                "date": "December 11th"
+            },
+            "all_ids": [
+                "R21",
+                "R9",
+                "R22",
+                "R20",
+                "R17",
+                "R4",
+                "R5",
+                "R3",
+                "R18",
+                "R8",
+                "R6",
+                "R1",
+                "R2",
+                "R7",
+                "R11",
+                "R19",
+                "R13",
+                "R16",
+                "R12",
+                "R10",
+                "R14",
+                "R15"
+            ],
+            "correct_ids": [
+                "R5",
+                "R11",
+                "R6"
+            ],
+            "wrong_ids": [
+                "R8",
+                "R18",
+                "R10",
+                "R3",
+                "R20",
+                "R9",
+                "R14",
+                "R7",
+                "R21",
+                "R17"
+            ],
+            "noise_ids": [
+                "R15",
+                "R1",
+                "R12",
+                "R13",
+                "R2",
+                "R4",
+                "R16",
+                "R19",
+                "R22"
+            ],
+            "best_id": "R5",
+            "best_id_thought": "To determine the option with the lowest cost, we need to consider the 'expectation' attribute of each option, which indicates the general cost level. 'Bite on the Go' has an expectation of 'Cheap', 'Quick Bites' has an expectation of 'Normal', and 'Express Eats' has an expectation of 'Expensive'. Since all options satisfy the user preferences equally, the cost expectation is the primary differentiator. Therefore, 'Bite on the Go' with a 'Cheap' expectation is likely to have the lowest cost for the user.",
+            "options": {
+                "correct": [
+                    {
+                        "name": "Bite on the Go",
+                        "cuisine": "Fast Food",
+                        "expectation": "Cheap",
+                        "rating": 9,
+                        "reviews": {
+                            "5_star": 1200,
+                            "4_star": 500,
+                            "3_star": 200,
+                            "2_star": 50,
+                            "1_star": 30
+                        },
+                        "tags": [
+                            "Outdoor Seating",
+                            "Late Night Service",
+                            "Walk-ins Welcomed"
+                        ],
+                        "id": "R5"
+                    },
+                    {
+                        "name": "Express Eats",
+                        "cuisine": "Fast Food",
+                        "expectation": "Expensive",
+                        "rating": 8,
+                        "reviews": {
+                            "5_star": 950,
+                            "4_star": 300,
+                            "3_star": 150,
+                            "2_star": 40,
+                            "1_star": 20
+                        },
+                        "tags": [
+                            "Outdoor Seating",
+                            "Business Dining",
+                            "Reservations Available"
+                        ],
+                        "id": "R6"
+                    },
+                    {
+                        "name": "Quick Bites",
+                        "cuisine": "Fast Food",
+                        "expectation": "Normal",
+                        "rating": 8,
+                        "reviews": {
+                            "5_star": 800,
+                            "4_star": 400,
+                            "3_star": 100,
+                            "2_star": 20,
+                            "1_star": 10
+                        },
+                        "tags": [
+                            "Outdoor Seating",
+                            "Parking",
+                            "Reservations Available"
+                        ],
+                        "id": "R11"
+                    }
+                ],
+                "wrong": [
+                    {
+                        "name": "Burger Bistro",
+                        "cuisine": "Fast Food",
+                        "rating": 6,
+                        "reviews": {
+                            "5_star": 20,
+                            "4_star": 40,
+                            "3_star": 30,
+                            "2_star": 5,
+                            "1_star": 5
+                        },
+                        "tags": [
+                            "Walk-ins Welcomed",
+                            "Late Night Service",
+                            "Parking"
+                        ],
+                        "id": "R10"
+                    },
+                    {
+                        "name": "Noodle Nook",
+                        "cuisine": "Chinese",
+                        "rating": 9,
+                        "reviews": {
+                            "5_star": 50,
+                            "4_star": 20,
+                            "3_star": 10,
+                            "2_star": 10,
+                            "1_star": 10
+                        },
+                        "tags": [
+                            "Reservations Available",
+                            "Parking",
+                            "Delivery Available"
+                        ],
+                        "id": "R3"
+                    },
+                    {
+                        "name": "Curry Corner",
+                        "cuisine": "Indian",
+                        "rating": 8,
+                        "reviews": {
+                            "5_star": 45,
+                            "4_star": 30,
+                            "3_star": 15,
+                            "2_star": 5,
+                            "1_star": 5
+                        },
+                        "tags": [
+                            "Parking",
+                            "Reservations Available",
+                            "Late Night Service"
+                        ],
+                        "id": "R17"
+                    },
+                    {
+                        "name": "Gourmet Delights",
+                        "cuisine": "French",
+                        "rating": 8,
+                        "reviews": {
+                            "5_star": 30,
+                            "4_star": 25,
+                            "3_star": 20,
+                            "2_star": 15,
+                            "1_star": 10
+                        },
+                        "tags": [
+                            "Business Dining",
+                            "Reservations Available",
+                            "Parking"
+                        ],
+                        "id": "R8"
+                    },
+                    {
+                        "name": "Sweet Tooth",
+                        "cuisine": "Dessert",
+                        "rating": 7,
+                        "reviews": {
+                            "5_star": 25,
+                            "4_star": 25,
+                            "3_star": 25,
+                            "2_star": 15,
+                            "1_star": 10
+                        },
+                        "tags": [
+                            "Walk-ins Welcomed",
+                            "Delivery Available",
+                            "Late Night Service"
+                        ],
+                        "id": "R14"
+                    },
+                    {
+                        "name": "Pizza Palace",
+                        "cuisine": "Italian",
+                        "rating": 7,
+                        "reviews": {
+                            "5_star": 40,
+                            "4_star": 35,
+                            "3_star": 15,
+                            "2_star": 5,
+                            "1_star": 5
+                        },
+                        "tags": [
+                            "Delivery Available",
+                            "Walk-ins Welcomed",
+                            "Reservations Available"
+                        ],
+                        "id": "R18"
+                    },
+                    {
+                        "name": "Taco Terrace",
+                        "cuisine": "Mexican",
+                        "rating": 8,
+                        "reviews": {
+                            "5_star": 35,
+                            "4_star": 30,
+                            "3_star": 25,
+                            "2_star": 5,
+                            "1_star": 5
+                        },
+                        "tags": [
+                            "Pet-Friendly",
+                            "Late Night Service",
+                            "Walk-ins Welcomed"
+                        ],
+                        "id": "R9"
+                    },
+                    {
+                        "name": "Urban Eats",
+                        "cuisine": "Cafe",
+                        "rating": 7,
+                        "reviews": {
+                            "5_star": 15,
+                            "4_star": 25,
+                            "3_star": 30,
+                            "2_star": 20,
+                            "1_star": 10
+                        },
+                        "tags": [
+                            "Parking",
+                            "Business Dining",
+                            "Reservations Available"
+                        ],
+                        "id": "R7"
+                    },
+                    {
+                        "name": "Sushi Spot",
+                        "cuisine": "Japanese",
+                        "rating": 9,
+                        "reviews": {
+                            "5_star": 60,
+                            "4_star": 25,
+                            "3_star": 10,
+                            "2_star": 3,
+                            "1_star": 2
+                        },
+                        "tags": [
+                            "Reservations Available",
+                            "Parking",
+                            "Business Dining"
+                        ],
+                        "id": "R21"
+                    },
+                    {
+                        "name": "Grill House",
+                        "cuisine": "Steakhouse",
+                        "rating": 8,
+                        "reviews": {
+                            "5_star": 30,
+                            "4_star": 30,
+                            "3_star": 20,
+                            "2_star": 10,
+                            "1_star": 10
+                        },
+                        "tags": [
+                            "Late Night Service",
+                            "Reservations Available",
+                            "Walk-ins Welcomed"
+                        ],
+                        "id": "R20"
+                    }
+                ],
+                "noise": [
+                    {
+                        "name": "Infinite Loop Eatery",
+                        "cuisine": "Dessert",
+                        "rating": 7,
+                        "reviews": {
+                            "5_star": 200,
+                            "4_star": 200,
+                            "3_star": 100,
+                            "2_star": 50,
+                            "1_star": 50
+                        },
+                        "tags": [
+                            "Parking",
+                            "Reservations Available",
+                            "Late Night Service"
+                        ],
+                        "id": "R2"
+                    },
+                    {
+                        "name": "Galactic Space Dine",
+                        "cuisine": "Ethiopian",
+                        "rating": 11,
+                        "reviews": {
+                            "5_star": 5000,
+                            "4_star": 3000,
+                            "3_star": 2000,
+                            "2_star": 1000,
+                            "1_star": 500
+                        },
+                        "tags": [
+                            "Business Dining",
+                            "Pet-Friendly",
+                            "Parking"
+                        ],
+                        "id": "R15"
+                    },
+                    {
+                        "name": "Underwater Bubble Cafe",
+                        "cuisine": "Seafood",
+                        "rating": 6,
+                        "reviews": {
+                            "5_star": 200,
+                            "4_star": 300,
+                            "3_star": 100,
+                            "2_star": 50,
+                            "1_star": 300
+                        },
+                        "tags": [
+                            "Late Night Service",
+                            "Reservations Available"
+                        ],
+                        "id": "R1"
+                    },
+                    {
+                        "name": "Time Travel Tavern",
+                        "cuisine": "Russian",
+                        "rating": 8,
+                        "reviews": {
+                            "5_star": 400,
+                            "4_star": 150,
+                            "3_star": 50,
+                            "2_star": 30,
+                            "1_star": 20
+                        },
+                        "tags": [
+                            "Outdoor Seating",
+                            "Walk-ins Welcomed"
+                        ],
+                        "id": "R12"
+                    },
+                    {
+                        "name": "Mars Rover Meals",
+                        "cuisine": "Mediterranean",
+                        "rating": 5,
+                        "reviews": {
+                            "5_star": 100,
+                            "4_star": 100,
+                            "3_star": 100,
+                            "2_star": 100,
+                            "1_star": 100
+                        },
+                        "tags": [
+                            "Delivery Available"
+                        ],
+                        "id": "R13"
+                    }
+                ]
+            }
+        },
+        "flight": {
+            "preferences": [
+                [
+                    "flight",
+                    "time",
+                    "prefer reasonable layover time",
+                    "I enjoy layovers that allow enough time to catch up with a friend over a coffee, but not so long that it feels like I'm waiting for a second round.",
+                    "All the flight options shuold have at least one layover. The correct options should have reasonable layover times (generally between 1-3 hours). The wrong options shuold do exactly the opposite against the correct options, should have very long (> 6 hours) or short (< 0.8 hours) layover times against user need, in order to be wrong against this preference."
+                ],
+                [
+                    "flight",
+                    "company",
+                    "prefer specific airline brand (user specifies)",
+                    "I appreciate usually emphasize on landing experience, and I found China Airline consistently ensures a comfortable and smooth landing experience, no matter the weather.",
+                    "Correct option should be the flight of the specific company that the user designates. Wrong options could contain flights of other companies that are not the user's preferred airline, in order to be wrong against this preference."
+                ],
+                [
+                    "flight",
+                    "amenities",
+                    "prefer having meal service on the flight",
+                    "I always plan my flight schedules around meal times because I enjoy having meals served during the flight.",
+                    "Correct options should have Meal Service available and listed in the amenities. Wrong options could be wrong against this preference by do not contain Meal Service in the amenity."
+                ]
+            ],
+            "arguments": {
+                "origin": "Los Angeles",
+                "destination": "New York City",
+                "date": "December 10th"
+            },
+            "all_ids": [
+                "F14",
+                "F2",
+                "F20",
+                "F1",
+                "F22",
+                "F7",
+                "F5",
+                "F21",
+                "F12",
+                "F17",
+                "F4",
+                "F8",
+                "F6",
+                "F3",
+                "F9",
+                "F10",
+                "F18",
+                "F11",
+                "F13",
+                "F15",
+                "F19",
+                "F16"
+            ],
+            "correct_ids": [
+                "F16",
+                "F19",
+                "F6"
+            ],
+            "wrong_ids": [
+                "F14",
+                "F13",
+                "F11",
+                "F18",
+                "F1",
+                "F8",
+                "F12",
+                "F20",
+                "F10",
+                "F17"
+            ],
+            "noise_ids": [
+                "F3",
+                "F4",
+                "F21",
+                "F15",
+                "F5",
+                "F9",
+                "F7",
+                "F2",
+                "F22"
+            ],
+            "best_id": "F16",
+            "best_id_thought": "To determine the option with the lowest cost, we need to consider the base cost of each option and any additional costs that might be incurred based on the user's preferences. All options are suitable as they meet the user's preferences for airline brand, layover time, and meal service. Therefore, we will focus on the explicit costs provided in each option. \n\n1. Option F16: \n   - Base cost: $600\n   - Additional costs: \n     - Checked bag: $50\n     - Business class upgrade: $200\n   - Total cost: $600 + $50 + $200 = $850\n\n2. Option F19: \n   - Base cost: $650\n   - Additional costs: \n     - Checked bag: $55\n     - Business class upgrade: $220\n   - Total cost: $650 + $55 + $220 = $925\n\n3. Option F6: \n   - Base cost: $700\n   - Additional costs: \n     - Checked bag: $60\n     - Business class upgrade: $250\n   - Total cost: $700 + $60 + $250 = $1010\n\nAfter calculating the total costs for each option, Option F16 has the lowest total cost of $850. Therefore, the option with the lowest cost is Option F16.",
+            "options": {
+                "correct": [
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Tokyo",
+                            "New York City"
+                        ],
+                        "time": [
+                            11,
+                            2,
+                            13
+                        ],
+                        "company": [
+                            "China Airline",
+                            "China Airline"
+                        ],
+                        "flight_number": [
+                            "CA123",
+                            "CA456"
+                        ],
+                        "cost": 600,
+                        "amenities": [
+                            "WiFi",
+                            "Meal Service",
+                            "Carry on Baggage Allowance"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 50,
+                            "cost_business_total": 200
+                        },
+                        "id": "F16"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Shanghai",
+                            "New York City"
+                        ],
+                        "time": [
+                            13,
+                            3,
+                            11
+                        ],
+                        "company": [
+                            "China Airline",
+                            "China Airline"
+                        ],
+                        "flight_number": [
+                            "CA345",
+                            "CA678"
+                        ],
+                        "cost": 700,
+                        "amenities": [
+                            "WiFi",
+                            "Meal Service"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 60,
+                            "cost_business_total": 250
+                        },
+                        "id": "F6"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Beijing",
+                            "New York City"
+                        ],
+                        "time": [
+                            12,
+                            1.5,
+                            14
+                        ],
+                        "company": [
+                            "China Airline",
+                            "China Airline"
+                        ],
+                        "flight_number": [
+                            "CA789",
+                            "CA012"
+                        ],
+                        "cost": 650,
+                        "amenities": [
+                            "WiFi",
+                            "Meal Service",
+                            "Lounge Access"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 55,
+                            "cost_business_total": 220
+                        },
+                        "id": "F19"
+                    }
+                ],
+                "wrong": [
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Houston",
+                            "New York City"
+                        ],
+                        "time": [
+                            3,
+                            8,
+                            3
+                        ],
+                        "company": [
+                            "Spirit Airlines",
+                            "Spirit Airlines"
+                        ],
+                        "flight_number": [
+                            "SP909",
+                            "SP1010"
+                        ],
+                        "cost": 180,
+                        "amenities": [
+                            "Meal Service",
+                            "Carry on Baggage Allowance"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 40,
+                            "cost_business_total": 100
+                        },
+                        "id": "F1"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Chicago",
+                            "New York City"
+                        ],
+                        "time": [
+                            4,
+                            0.5,
+                            2
+                        ],
+                        "company": [
+                            "United Airlines",
+                            "United Airlines"
+                        ],
+                        "flight_number": [
+                            "UA101",
+                            "UA202"
+                        ],
+                        "cost": 200,
+                        "amenities": [
+                            "WiFi",
+                            "Carry on Baggage Allowance"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 50,
+                            "cost_business_total": 150
+                        },
+                        "id": "F14"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Boston",
+                            "New York City"
+                        ],
+                        "time": [
+                            6,
+                            0.9,
+                            1
+                        ],
+                        "company": [
+                            "Hawaiian Airlines",
+                            "Hawaiian Airlines"
+                        ],
+                        "flight_number": [
+                            "HA777",
+                            "HA888"
+                        ],
+                        "cost": 290,
+                        "amenities": [
+                            "WiFi",
+                            "Meal Service"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 70,
+                            "cost_business_total": 250
+                        },
+                        "id": "F10"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Denver",
+                            "New York City"
+                        ],
+                        "time": [
+                            2.5,
+                            2,
+                            3
+                        ],
+                        "company": [
+                            "JetBlue",
+                            "JetBlue"
+                        ],
+                        "flight_number": [
+                            "JB111",
+                            "JB222"
+                        ],
+                        "cost": 240,
+                        "amenities": [
+                            "Meal Service",
+                            "WiFi"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 45,
+                            "cost_business_total": 120
+                        },
+                        "id": "F8"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Las Vegas",
+                            "New York City"
+                        ],
+                        "time": [
+                            1,
+                            0.6,
+                            4.5
+                        ],
+                        "company": [
+                            "Frontier Airlines",
+                            "Frontier Airlines"
+                        ],
+                        "flight_number": [
+                            "FR555",
+                            "FR666"
+                        ],
+                        "cost": 210,
+                        "amenities": [
+                            "WiFi",
+                            "Carry on Baggage Allowance"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 30,
+                            "cost_business_total": 100
+                        },
+                        "id": "F20"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Phoenix",
+                            "New York City"
+                        ],
+                        "time": [
+                            1,
+                            0.7,
+                            4
+                        ],
+                        "company": [
+                            "Alaska Airlines",
+                            "Alaska Airlines"
+                        ],
+                        "flight_number": [
+                            "AS333",
+                            "AS444"
+                        ],
+                        "cost": 225,
+                        "amenities": [
+                            "Meal Service",
+                            "WiFi"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 55,
+                            "cost_business_total": 175
+                        },
+                        "id": "F12"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Miami",
+                            "New York City"
+                        ],
+                        "time": [
+                            5,
+                            1.5,
+                            3
+                        ],
+                        "company": [
+                            "Southwest Airlines",
+                            "Southwest Airlines"
+                        ],
+                        "flight_number": [
+                            "SW707",
+                            "SW808"
+                        ],
+                        "cost": 260,
+                        "amenities": [
+                            "WiFi",
+                            "Carry on Baggage Allowance"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 65,
+                            "cost_business_total": 210
+                        },
+                        "id": "F18"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "San Francisco",
+                            "New York City"
+                        ],
+                        "time": [
+                            1.5,
+                            0.5,
+                            5
+                        ],
+                        "company": [
+                            "Allegiant Air",
+                            "Allegiant Air"
+                        ],
+                        "flight_number": [
+                            "G4111",
+                            "G4222"
+                        ],
+                        "cost": 200,
+                        "amenities": [
+                            "WiFi"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 35,
+                            "cost_business_total": 110
+                        },
+                        "id": "F17"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Atlanta",
+                            "New York City"
+                        ],
+                        "time": [
+                            4,
+                            2,
+                            2
+                        ],
+                        "company": [
+                            "Delta Airlines",
+                            "Delta Airlines"
+                        ],
+                        "flight_number": [
+                            "DL505",
+                            "DL606"
+                        ],
+                        "cost": 230,
+                        "amenities": [
+                            "Carry on Baggage Allowance"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 55,
+                            "cost_business_total": 180
+                        },
+                        "id": "F11"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Dallas",
+                            "New York City"
+                        ],
+                        "time": [
+                            3.5,
+                            7,
+                            3
+                        ],
+                        "company": [
+                            "American Airlines",
+                            "American Airlines"
+                        ],
+                        "flight_number": [
+                            "AA303",
+                            "AA404"
+                        ],
+                        "cost": 250,
+                        "amenities": [
+                            "Meal Service",
+                            "WiFi"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 60,
+                            "cost_business_total": 200
+                        },
+                        "id": "F13"
+                    }
+                ],
+                "noise": [
+                    {
+                        "path": [
+                            "Los Angeles"
+                        ],
+                        "time": [
+                            0
+                        ],
+                        "company": [
+                            "Imaginary Airlines"
+                        ],
+                        "flight_number": [
+                            "IA000"
+                        ],
+                        "cost": -1,
+                        "amenities": [
+                            "WiFi",
+                            "Meal Service"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": null,
+                            "cost_business_total": null
+                        },
+                        "id": "F5"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Las Vegas",
+                            "Mars"
+                        ],
+                        "time": [
+                            1,
+                            48,
+                            0
+                        ],
+                        "company": [
+                            "SpaceX"
+                        ],
+                        "flight_number": [
+                            "SX001",
+                            "SX002"
+                        ],
+                        "cost": 1000000,
+                        "amenities": [
+                            "Lounge Access"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": null,
+                            "cost_business_total": 100000
+                        },
+                        "id": "F4"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Narnia"
+                        ],
+                        "time": [
+                            12
+                        ],
+                        "company": [
+                            "Lion Fleet"
+                        ],
+                        "flight_number": [
+                            "LF123"
+                        ],
+                        "cost": 0,
+                        "amenities": [
+                            "Meal Service"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": null,
+                            "cost_business_total": null
+                        },
+                        "id": "F15"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "Tokyo",
+                            "Sydney",
+                            "New York City"
+                        ],
+                        "time": [
+                            11,
+                            24,
+                            15,
+                            10
+                        ],
+                        "company": [
+                            "Emirates",
+                            "Qantas",
+                            "British Airways"
+                        ],
+                        "flight_number": [
+                            "EK123",
+                            "QF456",
+                            "BA789"
+                        ],
+                        "cost": 9999,
+                        "amenities": [
+                            "WiFi"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 300,
+                            "cost_business_total": null
+                        },
+                        "id": "F3"
+                    },
+                    {
+                        "path": [
+                            "Los Angeles",
+                            "New York City"
+                        ],
+                        "time": [
+                            100
+                        ],
+                        "company": [
+                            "Intergalactic Airways"
+                        ],
+                        "flight_number": [
+                            "IA999"
+                        ],
+                        "cost": 5000,
+                        "amenities": [
+                            "WiFi"
+                        ],
+                        "service": {
+                            "cost_check_bag_total": 50,
+                            "cost_business_total": 300
+                        },
+                        "id": "F21"
+                    }
+                ]
+            }
+        },
+        "hotel": {
+            "preferences": [
+                [
+                    "hotel",
+                    "name",
+                    "prefer specific hotel brand (user specifies)",
+                    "I heard Hyatt's loyalty program offers such amazing perks that it seems hard to pass up.",
+                    "Correct options should have the user-specified hotel brand name in the option's name field and align with the brand user wants. Wrong options could be other hotel brands in its name, in order to make it against this preference."
+                ],
+                [
+                    "hotel",
+                    "room",
+                    "prefer Double room",
+                    "Another collegue is on the same trip with me and we need separate beds for comfort and privacy.",
+                    "Correct options should have Double room as its room type (could have others, but Double must be included). Wrong options could be wrong against this preference by not having Double room as one of its room type."
+                ],
+                [
+                    "hotel",
+                    "rating",
+                    "prefer hotel rating within a specific range (user specifies)",
+                    "I always find that places rated in the 7 to 9 range offer a great mix of value and comfort, just like my friends recommend.",
+                    "Correct options rating should be within the range that the user specifies. Wrong options could be wrong against this preference by diverging very much from the user preferred rating range and usually lower than the correct option's ratings. Note that higher rating might normally induce higher cost in the option."
+                ],
+                [
+                    "hotel",
+                    "amenities",
+                    "prefer having city or ocean or mountain view (user specifies)",
+                    "I find the idea of watching the city lights twinkle from my room at night absolutely essential to my stay.",
+                    "Correct options should have City or Mountain or Ocean View available according to what the user specifies and have it listed in the amenities. Wrong options could be wrong against this preference by do not contain the view that the user prefer in the amenity."
+                ]
+            ],
+            "arguments": {
+                "city": "New York City",
+                "date_start": "December 10th",
+                "date_end": "December 15th"
+            },
+            "all_ids": [
+                "H3",
+                "H18",
+                "H14",
+                "H10",
+                "H4",
+                "H2",
+                "H8",
+                "H7",
+                "H12",
+                "H20",
+                "H13",
+                "H22",
+                "H9",
+                "H17",
+                "H11",
+                "H5",
+                "H19",
+                "H1",
+                "H16",
+                "H6",
+                "H15",
+                "H21"
+            ],
+            "correct_ids": [
+                "H11",
+                "H2",
+                "H12"
+            ],
+            "wrong_ids": [
+                "H17",
+                "H15",
+                "H4",
+                "H19",
+                "H5",
+                "H20",
+                "H9",
+                "H16",
+                "H14",
+                "H21"
+            ],
+            "noise_ids": [
+                "H6",
+                "H10",
+                "H18",
+                "H7",
+                "H13",
+                "H8",
+                "H1",
+                "H3",
+                "H22"
+            ],
+            "best_id": "H12",
+            "best_id_thought": "To determine the option with the lowest cost, we need to consider the cost of the Double room in each option, as the user prefers a Double room. Additionally, we should include any additional service costs such as breakfast, parking, and barrier-free access, as these could impact the total cost. \n\n1. **Hyatt Regency New York (ID: H11):**\n   - Double room cost: $1700\n   - Additional costs: Breakfast ($100) + Parking ($150) = $250\n   - Total cost: $1700 + $250 = $1950\n\n2. **Hyatt Place NYC Times Square (ID: H2):**\n   - Double room cost: $1600\n   - Additional costs: Breakfast ($120) + Barrier-free ($200) = $320\n   - Total cost: $1600 + $320 = $1920\n\n3. **Hyatt House New York/Chelsea (ID: H12):**\n   - Double room cost: $1550\n   - Additional costs: Parking ($180) + Barrier-free ($150) = $330\n   - Total cost: $1550 + $330 = $1880\n\nAfter calculating the total costs for each option, Hyatt House New York/Chelsea (ID: H12) has the lowest total cost of $1880. Therefore, the option with the lowest cost is Hyatt House New York/Chelsea.",
+            "options": {
+                "correct": [
+                    {
+                        "name": "Hyatt House New York/Chelsea",
+                        "room": [
+                            {
+                                "type": "Double",
+                                "capacity": 4
+                            },
+                            {
+                                "type": "King",
+                                "capacity": 2
+                            }
+                        ],
+                        "cost": [
+                            1550,
+                            1450
+                        ],
+                        "rating": 7,
+                        "amenities": [
+                            "City View",
+                            "Pets Allowed",
+                            "Washer and Dryer"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": null,
+                            "cost_parking_total": 180,
+                            "cost_barrier_free_total": 150
+                        },
+                        "id": "H12"
+                    },
+                    {
+                        "name": "Hyatt Regency New York",
+                        "room": [
+                            {
+                                "type": "King",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Double",
+                                "capacity": 4
+                            },
+                            {
+                                "type": "Suite (with kitchen)",
+                                "capacity": 4
+                            }
+                        ],
+                        "cost": [
+                            1500,
+                            1700,
+                            2500
+                        ],
+                        "rating": 8,
+                        "amenities": [
+                            "City View",
+                            "Gym",
+                            "High-Speed WiFi",
+                            "Air Conditioning"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 100,
+                            "cost_parking_total": 150,
+                            "cost_barrier_free_total": null
+                        },
+                        "id": "H11"
+                    },
+                    {
+                        "name": "Hyatt Place NYC Times Square",
+                        "room": [
+                            {
+                                "type": "Double",
+                                "capacity": 4
+                            },
+                            {
+                                "type": "Queen",
+                                "capacity": 2
+                            }
+                        ],
+                        "cost": [
+                            1600,
+                            1400
+                        ],
+                        "rating": 9,
+                        "amenities": [
+                            "High-Speed WiFi",
+                            "City View",
+                            "Gym"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 120,
+                            "cost_parking_total": null,
+                            "cost_barrier_free_total": 200
+                        },
+                        "id": "H2"
+                    }
+                ],
+                "wrong": [
+                    {
+                        "name": "Holiday Inn Manhattan",
+                        "room": [
+                            {
+                                "type": "King",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Queen",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Double",
+                                "capacity": 2
+                            }
+                        ],
+                        "cost": [
+                            1400,
+                            1500,
+                            2400
+                        ],
+                        "rating": 6,
+                        "amenities": [
+                            "Gym",
+                            "High-Speed WiFi",
+                            "City View",
+                            "Air Conditioning"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 90,
+                            "cost_parking_total": 190,
+                            "cost_barrier_free_total": 130
+                        },
+                        "id": "H5"
+                    },
+                    {
+                        "name": "Hyatt Regency NYC",
+                        "room": [
+                            {
+                                "type": "King",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Suite (with kitchen)",
+                                "capacity": 4
+                            }
+                        ],
+                        "cost": [
+                            1800,
+                            1900
+                        ],
+                        "rating": 8,
+                        "amenities": [
+                            "Gym",
+                            "High-Speed WiFi",
+                            "Ocean View",
+                            "Air Conditioning"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 130,
+                            "cost_parking_total": 230,
+                            "cost_barrier_free_total": 170
+                        },
+                        "id": "H19"
+                    },
+                    {
+                        "name": "Sheraton Times Square",
+                        "room": [
+                            {
+                                "type": "King",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Queen",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Double",
+                                "capacity": 2
+                            }
+                        ],
+                        "cost": [
+                            1700,
+                            1800,
+                            2700
+                        ],
+                        "rating": 9,
+                        "amenities": [
+                            "Gym",
+                            "High-Speed WiFi",
+                            "Mountain View",
+                            "Air Conditioning"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 110,
+                            "cost_parking_total": 220,
+                            "cost_barrier_free_total": 140
+                        },
+                        "id": "H4"
+                    },
+                    {
+                        "name": "Hyatt Union Square",
+                        "room": [
+                            {
+                                "type": "King",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Double",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Suite (with kitchen)",
+                                "capacity": 4
+                            }
+                        ],
+                        "cost": [
+                            1700,
+                            1800,
+                            2700
+                        ],
+                        "rating": 5,
+                        "amenities": [
+                            "Gym",
+                            "High-Speed WiFi",
+                            "City View",
+                            "Air Conditioning"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 110,
+                            "cost_parking_total": 210,
+                            "cost_barrier_free_total": 160
+                        },
+                        "id": "H16"
+                    },
+                    {
+                        "name": "Marriott Downtown NYC",
+                        "room": [
+                            {
+                                "type": "King",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Queen",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Suite (with kitchen)",
+                                "capacity": 4
+                            }
+                        ],
+                        "cost": [
+                            1500,
+                            1600,
+                            2500
+                        ],
+                        "rating": 8,
+                        "amenities": [
+                            "Gym",
+                            "High-Speed WiFi",
+                            "City View",
+                            "Air Conditioning"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 100,
+                            "cost_parking_total": 200,
+                            "cost_barrier_free_total": 150
+                        },
+                        "id": "H17"
+                    },
+                    {
+                        "name": "Hyatt Grand Central",
+                        "room": [
+                            {
+                                "type": "King",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Suite (with kitchen)",
+                                "capacity": 4
+                            }
+                        ],
+                        "cost": [
+                            1900,
+                            2000
+                        ],
+                        "rating": 8,
+                        "amenities": [
+                            "Gym",
+                            "High-Speed WiFi",
+                            "Mountain View",
+                            "Air Conditioning"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 140,
+                            "cost_parking_total": 240,
+                            "cost_barrier_free_total": 180
+                        },
+                        "id": "H20"
+                    },
+                    {
+                        "name": "Hyatt Place NYC",
+                        "room": [
+                            {
+                                "type": "King",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Queen",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Suite (with kitchen)",
+                                "capacity": 4
+                            }
+                        ],
+                        "cost": [
+                            1600,
+                            1700,
+                            2600
+                        ],
+                        "rating": 6,
+                        "amenities": [
+                            "Gym",
+                            "High-Speed WiFi",
+                            "City View",
+                            "Air Conditioning"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 120,
+                            "cost_parking_total": 210,
+                            "cost_barrier_free_total": 160
+                        },
+                        "id": "H15"
+                    },
+                    {
+                        "name": "Four Seasons Downtown",
+                        "room": [
+                            {
+                                "type": "King",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Queen",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Double",
+                                "capacity": 2
+                            }
+                        ],
+                        "cost": [
+                            2400,
+                            2500,
+                            3400
+                        ],
+                        "rating": 9,
+                        "amenities": [
+                            "Gym",
+                            "High-Speed WiFi",
+                            "City View",
+                            "Air Conditioning"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 160,
+                            "cost_parking_total": 260,
+                            "cost_barrier_free_total": 200
+                        },
+                        "id": "H14"
+                    },
+                    {
+                        "name": "Ritz-Carlton Central Park",
+                        "room": [
+                            {
+                                "type": "King",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Queen",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Double",
+                                "capacity": 2
+                            }
+                        ],
+                        "cost": [
+                            2500,
+                            2600,
+                            3500
+                        ],
+                        "rating": 10,
+                        "amenities": [
+                            "Gym",
+                            "High-Speed WiFi",
+                            "Ocean View",
+                            "Air Conditioning"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 150,
+                            "cost_parking_total": 250,
+                            "cost_barrier_free_total": 190
+                        },
+                        "id": "H9"
+                    },
+                    {
+                        "name": "Hyatt Herald Square",
+                        "room": [
+                            {
+                                "type": "King",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Queen",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Suite (with kitchen)",
+                                "capacity": 4
+                            }
+                        ],
+                        "cost": [
+                            1800,
+                            1900,
+                            2800
+                        ],
+                        "rating": 8,
+                        "amenities": [
+                            "Gym",
+                            "High-Speed WiFi",
+                            "Air Conditioning"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 120,
+                            "cost_parking_total": 220,
+                            "cost_barrier_free_total": 160
+                        },
+                        "id": "H21"
+                    }
+                ],
+                "noise": [
+                    {
+                        "name": "Forest Whisper Inn",
+                        "room": [
+                            {
+                                "type": "Treehouse",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Woodland Cabin",
+                                "capacity": 4
+                            }
+                        ],
+                        "cost": [
+                            300,
+                            500
+                        ],
+                        "rating": 5,
+                        "amenities": [
+                            "Mountain View"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 100,
+                            "cost_parking_total": 50,
+                            "cost_barrier_free_total": null
+                        },
+                        "id": "H7"
+                    },
+                    {
+                        "name": "Mars Intergalactic Resort",
+                        "room": [
+                            {
+                                "type": "Alien Pod",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Space Capsule",
+                                "capacity": 4
+                            }
+                        ],
+                        "cost": [
+                            500000,
+                            1000000
+                        ],
+                        "rating": 11,
+                        "amenities": [
+                            "Mountain View"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": null,
+                            "cost_parking_total": 0,
+                            "cost_barrier_free_total": null
+                        },
+                        "id": "H6"
+                    },
+                    {
+                        "name": "Underwater Atlantis Lodge",
+                        "room": [
+                            {
+                                "type": "Bubble Suite",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Coral Reef King",
+                                "capacity": 3
+                            }
+                        ],
+                        "cost": [
+                            900,
+                            1600
+                        ],
+                        "rating": 2,
+                        "amenities": [
+                            "Ocean View"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 200,
+                            "cost_parking_total": 300,
+                            "cost_barrier_free_total": 100
+                        },
+                        "id": "H10"
+                    },
+                    {
+                        "name": "Mystic Desert Oasis",
+                        "room": [
+                            {
+                                "type": "Sand Dune Suite",
+                                "capacity": 3
+                            },
+                            {
+                                "type": "Mirage Room",
+                                "capacity": 5
+                            }
+                        ],
+                        "cost": [
+                            750,
+                            1200
+                        ],
+                        "rating": 3,
+                        "amenities": [
+                            "Mountain View"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 250,
+                            "cost_parking_total": 150,
+                            "cost_barrier_free_total": null
+                        },
+                        "id": "H13"
+                    },
+                    {
+                        "name": "Cloud Nine Skyscraper Suites",
+                        "room": [
+                            {
+                                "type": "Sky Loft",
+                                "capacity": 2
+                            },
+                            {
+                                "type": "Heavenly Haven",
+                                "capacity": 1
+                            }
+                        ],
+                        "cost": [
+                            999,
+                            1999
+                        ],
+                        "rating": 9,
+                        "amenities": [
+                            "City View"
+                        ],
+                        "service": {
+                            "cost_breakfast_total": 150,
+                            "cost_parking_total": 200,
+                            "cost_barrier_free_total": 50
+                        },
+                        "id": "H18"
+                    }
+                ]
+            }
+        },
+        "initial_description": "I need a one-way flight from Los Angeles to New York City on December 10th, a hotel in New York City from December 10th to December 15th, and a restaurant in New York City on December 11th."
+    },
+    "all_options": {
+        "restaurant": [
+            {
+                "name": "Pizza Palace",
+                "cuisine": "Italian",
+                "rating": 7,
+                "reviews": {
+                    "5_star": 40,
+                    "4_star": 35,
+                    "3_star": 15,
+                    "2_star": 5,
+                    "1_star": 5
+                },
+                "tags": [
+                    "Delivery Available",
+                    "Walk-ins Welcomed",
+                    "Reservations Available"
+                ],
+                "id": "R18"
+            },
+            {
+                "name": "Quick Bites",
+                "cuisine": "Fast Food",
+                "expectation": "Normal",
+                "rating": 8,
+                "reviews": {
+                    "5_star": 800,
+                    "4_star": 400,
+                    "3_star": 100,
+                    "2_star": 20,
+                    "1_star": 10
+                },
+                "tags": [
+                    "Outdoor Seating",
+                    "Parking",
+                    "Reservations Available"
+                ],
+                "id": "R11"
+            },
+            {
+                "name": "Taco Terrace",
+                "cuisine": "Mexican",
+                "rating": 8,
+                "reviews": {
+                    "5_star": 35,
+                    "4_star": 30,
+                    "3_star": 25,
+                    "2_star": 5,
+                    "1_star": 5
+                },
+                "tags": [
+                    "Pet-Friendly",
+                    "Late Night Service",
+                    "Walk-ins Welcomed"
+                ],
+                "id": "R9"
+            },
+            {
+                "name": "Express Eats",
+                "cuisine": "Fast Food",
+                "expectation": "Expensive",
+                "rating": 8,
+                "reviews": {
+                    "5_star": 950,
+                    "4_star": 300,
+                    "3_star": 150,
+                    "2_star": 40,
+                    "1_star": 20
+                },
+                "tags": [
+                    "Outdoor Seating",
+                    "Business Dining",
+                    "Reservations Available"
+                ],
+                "id": "R6"
+            },
+            {
+                "name": "Galactic Space Dine",
+                "cuisine": "Ethiopian",
+                "rating": 11,
+                "reviews": {
+                    "5_star": 5000,
+                    "4_star": 3000,
+                    "3_star": 2000,
+                    "2_star": 1000,
+                    "1_star": 500
+                },
+                "tags": [
+                    "Business Dining",
+                    "Pet-Friendly",
+                    "Parking"
+                ],
+                "id": "R15"
+            },
+            {
+                "name": "Time Travel Tavern",
+                "cuisine": "Russian",
+                "rating": 8,
+                "reviews": {
+                    "5_star": 400,
+                    "4_star": 150,
+                    "3_star": 50,
+                    "2_star": 30,
+                    "1_star": 20
+                },
+                "tags": [
+                    "Outdoor Seating",
+                    "Walk-ins Welcomed"
+                ],
+                "id": "R12"
+            },
+            {
+                "name": "Infinite Loop Eatery",
+                "cuisine": "Dessert",
+                "rating": 7,
+                "reviews": {
+                    "5_star": 200,
+                    "4_star": 200,
+                    "3_star": 100,
+                    "2_star": 50,
+                    "1_star": 50
+                },
+                "tags": [
+                    "Parking",
+                    "Reservations Available",
+                    "Late Night Service"
+                ],
+                "id": "R2"
+            },
+            {
+                "name": "Underwater Bubble Cafe",
+                "cuisine": "Seafood",
+                "rating": 6,
+                "reviews": {
+                    "5_star": 200,
+                    "4_star": 300,
+                    "3_star": 100,
+                    "2_star": 50,
+                    "1_star": 300
+                },
+                "tags": [
+                    "Late Night Service",
+                    "Reservations Available"
+                ],
+                "id": "R1"
+            },
+            {
+                "name": "Sushi Spot",
+                "cuisine": "Japanese",
+                "rating": 9,
+                "reviews": {
+                    "5_star": 60,
+                    "4_star": 25,
+                    "3_star": 10,
+                    "2_star": 3,
+                    "1_star": 2
+                },
+                "tags": [
+                    "Reservations Available",
+                    "Parking",
+                    "Business Dining"
+                ],
+                "id": "R21"
+            },
+            {
+                "name": "Noodle Nook",
+                "cuisine": "Chinese",
+                "rating": 9,
+                "reviews": {
+                    "5_star": 50,
+                    "4_star": 20,
+                    "3_star": 10,
+                    "2_star": 10,
+                    "1_star": 10
+                },
+                "tags": [
+                    "Reservations Available",
+                    "Parking",
+                    "Delivery Available"
+                ],
+                "id": "R3"
+            },
+            {
+                "name": "Curry Corner",
+                "cuisine": "Indian",
+                "rating": 8,
+                "reviews": {
+                    "5_star": 45,
+                    "4_star": 30,
+                    "3_star": 15,
+                    "2_star": 5,
+                    "1_star": 5
+                },
+                "tags": [
+                    "Parking",
+                    "Reservations Available",
+                    "Late Night Service"
+                ],
+                "id": "R17"
+            },
+            {
+                "name": "Grill House",
+                "cuisine": "Steakhouse",
+                "rating": 8,
+                "reviews": {
+                    "5_star": 30,
+                    "4_star": 30,
+                    "3_star": 20,
+                    "2_star": 10,
+                    "1_star": 10
+                },
+                "tags": [
+                    "Late Night Service",
+                    "Reservations Available",
+                    "Walk-ins Welcomed"
+                ],
+                "id": "R20"
+            },
+            {
+                "name": "Mars Rover Meals",
+                "cuisine": "Mediterranean",
+                "rating": 5,
+                "reviews": {
+                    "5_star": 100,
+                    "4_star": 100,
+                    "3_star": 100,
+                    "2_star": 100,
+                    "1_star": 100
+                },
+                "tags": [
+                    "Delivery Available"
+                ],
+                "id": "R13"
+            },
+            {
+                "name": "Urban Eats",
+                "cuisine": "Cafe",
+                "rating": 7,
+                "reviews": {
+                    "5_star": 15,
+                    "4_star": 25,
+                    "3_star": 30,
+                    "2_star": 20,
+                    "1_star": 10
+                },
+                "tags": [
+                    "Parking",
+                    "Business Dining",
+                    "Reservations Available"
+                ],
+                "id": "R7"
+            },
+            {
+                "name": "Burger Bistro",
+                "cuisine": "Fast Food",
+                "rating": 6,
+                "reviews": {
+                    "5_star": 20,
+                    "4_star": 40,
+                    "3_star": 30,
+                    "2_star": 5,
+                    "1_star": 5
+                },
+                "tags": [
+                    "Walk-ins Welcomed",
+                    "Late Night Service",
+                    "Parking"
+                ],
+                "id": "R10"
+            },
+            {
+                "name": "Bite on the Go",
+                "cuisine": "Fast Food",
+                "expectation": "Cheap",
+                "rating": 9,
+                "reviews": {
+                    "5_star": 1200,
+                    "4_star": 500,
+                    "3_star": 200,
+                    "2_star": 50,
+                    "1_star": 30
+                },
+                "tags": [
+                    "Outdoor Seating",
+                    "Late Night Service",
+                    "Walk-ins Welcomed"
+                ],
+                "id": "R5"
+            },
+            {
+                "name": "Gourmet Delights",
+                "cuisine": "French",
+                "rating": 8,
+                "reviews": {
+                    "5_star": 30,
+                    "4_star": 25,
+                    "3_star": 20,
+                    "2_star": 15,
+                    "1_star": 10
+                },
+                "tags": [
+                    "Business Dining",
+                    "Reservations Available",
+                    "Parking"
+                ],
+                "id": "R8"
+            },
+            {
+                "name": "Sweet Tooth",
+                "cuisine": "Dessert",
+                "rating": 7,
+                "reviews": {
+                    "5_star": 25,
+                    "4_star": 25,
+                    "3_star": 25,
+                    "2_star": 15,
+                    "1_star": 10
+                },
+                "tags": [
+                    "Walk-ins Welcomed",
+                    "Delivery Available",
+                    "Late Night Service"
+                ],
+                "id": "R14"
+            }
+        ],
+        "flight": [
+            {
+                "path": [
+                    "Los Angeles"
+                ],
+                "time": [
+                    0
+                ],
+                "company": [
+                    "Imaginary Airlines"
+                ],
+                "flight_number": [
+                    "IA000"
+                ],
+                "cost": -1,
+                "amenities": [
+                    "WiFi",
+                    "Meal Service"
+                ],
+                "service": {
+                    "cost_check_bag_total": null,
+                    "cost_business_total": null
+                },
+                "id": "F5"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Beijing",
+                    "New York City"
+                ],
+                "time": [
+                    12,
+                    1.5,
+                    14
+                ],
+                "company": [
+                    "China Airline",
+                    "China Airline"
+                ],
+                "flight_number": [
+                    "CA789",
+                    "CA012"
+                ],
+                "cost": 650,
+                "amenities": [
+                    "WiFi",
+                    "Meal Service",
+                    "Lounge Access"
+                ],
+                "service": {
+                    "cost_check_bag_total": 55,
+                    "cost_business_total": 220
+                },
+                "id": "F19"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Boston",
+                    "New York City"
+                ],
+                "time": [
+                    6,
+                    0.9,
+                    1
+                ],
+                "company": [
+                    "Hawaiian Airlines",
+                    "Hawaiian Airlines"
+                ],
+                "flight_number": [
+                    "HA777",
+                    "HA888"
+                ],
+                "cost": 290,
+                "amenities": [
+                    "WiFi",
+                    "Meal Service"
+                ],
+                "service": {
+                    "cost_check_bag_total": 70,
+                    "cost_business_total": 250
+                },
+                "id": "F10"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "San Francisco",
+                    "New York City"
+                ],
+                "time": [
+                    1.5,
+                    0.5,
+                    5
+                ],
+                "company": [
+                    "Allegiant Air",
+                    "Allegiant Air"
+                ],
+                "flight_number": [
+                    "G4111",
+                    "G4222"
+                ],
+                "cost": 200,
+                "amenities": [
+                    "WiFi"
+                ],
+                "service": {
+                    "cost_check_bag_total": 35,
+                    "cost_business_total": 110
+                },
+                "id": "F17"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Narnia"
+                ],
+                "time": [
+                    12
+                ],
+                "company": [
+                    "Lion Fleet"
+                ],
+                "flight_number": [
+                    "LF123"
+                ],
+                "cost": 0,
+                "amenities": [
+                    "Meal Service"
+                ],
+                "service": {
+                    "cost_check_bag_total": null,
+                    "cost_business_total": null
+                },
+                "id": "F15"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Phoenix",
+                    "New York City"
+                ],
+                "time": [
+                    1,
+                    0.7,
+                    4
+                ],
+                "company": [
+                    "Alaska Airlines",
+                    "Alaska Airlines"
+                ],
+                "flight_number": [
+                    "AS333",
+                    "AS444"
+                ],
+                "cost": 225,
+                "amenities": [
+                    "Meal Service",
+                    "WiFi"
+                ],
+                "service": {
+                    "cost_check_bag_total": 55,
+                    "cost_business_total": 175
+                },
+                "id": "F12"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Atlanta",
+                    "New York City"
+                ],
+                "time": [
+                    4,
+                    2,
+                    2
+                ],
+                "company": [
+                    "Delta Airlines",
+                    "Delta Airlines"
+                ],
+                "flight_number": [
+                    "DL505",
+                    "DL606"
+                ],
+                "cost": 230,
+                "amenities": [
+                    "Carry on Baggage Allowance"
+                ],
+                "service": {
+                    "cost_check_bag_total": 55,
+                    "cost_business_total": 180
+                },
+                "id": "F11"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Shanghai",
+                    "New York City"
+                ],
+                "time": [
+                    13,
+                    3,
+                    11
+                ],
+                "company": [
+                    "China Airline",
+                    "China Airline"
+                ],
+                "flight_number": [
+                    "CA345",
+                    "CA678"
+                ],
+                "cost": 700,
+                "amenities": [
+                    "WiFi",
+                    "Meal Service"
+                ],
+                "service": {
+                    "cost_check_bag_total": 60,
+                    "cost_business_total": 250
+                },
+                "id": "F6"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Las Vegas",
+                    "New York City"
+                ],
+                "time": [
+                    1,
+                    0.6,
+                    4.5
+                ],
+                "company": [
+                    "Frontier Airlines",
+                    "Frontier Airlines"
+                ],
+                "flight_number": [
+                    "FR555",
+                    "FR666"
+                ],
+                "cost": 210,
+                "amenities": [
+                    "WiFi",
+                    "Carry on Baggage Allowance"
+                ],
+                "service": {
+                    "cost_check_bag_total": 30,
+                    "cost_business_total": 100
+                },
+                "id": "F20"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Tokyo",
+                    "Sydney",
+                    "New York City"
+                ],
+                "time": [
+                    11,
+                    24,
+                    15,
+                    10
+                ],
+                "company": [
+                    "Emirates",
+                    "Qantas",
+                    "British Airways"
+                ],
+                "flight_number": [
+                    "EK123",
+                    "QF456",
+                    "BA789"
+                ],
+                "cost": 9999,
+                "amenities": [
+                    "WiFi"
+                ],
+                "service": {
+                    "cost_check_bag_total": 300,
+                    "cost_business_total": null
+                },
+                "id": "F3"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Tokyo",
+                    "New York City"
+                ],
+                "time": [
+                    11,
+                    2,
+                    13
+                ],
+                "company": [
+                    "China Airline",
+                    "China Airline"
+                ],
+                "flight_number": [
+                    "CA123",
+                    "CA456"
+                ],
+                "cost": 600,
+                "amenities": [
+                    "WiFi",
+                    "Meal Service",
+                    "Carry on Baggage Allowance"
+                ],
+                "service": {
+                    "cost_check_bag_total": 50,
+                    "cost_business_total": 200
+                },
+                "id": "F16"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Denver",
+                    "New York City"
+                ],
+                "time": [
+                    2.5,
+                    2,
+                    3
+                ],
+                "company": [
+                    "JetBlue",
+                    "JetBlue"
+                ],
+                "flight_number": [
+                    "JB111",
+                    "JB222"
+                ],
+                "cost": 240,
+                "amenities": [
+                    "Meal Service",
+                    "WiFi"
+                ],
+                "service": {
+                    "cost_check_bag_total": 45,
+                    "cost_business_total": 120
+                },
+                "id": "F8"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Houston",
+                    "New York City"
+                ],
+                "time": [
+                    3,
+                    8,
+                    3
+                ],
+                "company": [
+                    "Spirit Airlines",
+                    "Spirit Airlines"
+                ],
+                "flight_number": [
+                    "SP909",
+                    "SP1010"
+                ],
+                "cost": 180,
+                "amenities": [
+                    "Meal Service",
+                    "Carry on Baggage Allowance"
+                ],
+                "service": {
+                    "cost_check_bag_total": 40,
+                    "cost_business_total": 100
+                },
+                "id": "F1"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Chicago",
+                    "New York City"
+                ],
+                "time": [
+                    4,
+                    0.5,
+                    2
+                ],
+                "company": [
+                    "United Airlines",
+                    "United Airlines"
+                ],
+                "flight_number": [
+                    "UA101",
+                    "UA202"
+                ],
+                "cost": 200,
+                "amenities": [
+                    "WiFi",
+                    "Carry on Baggage Allowance"
+                ],
+                "service": {
+                    "cost_check_bag_total": 50,
+                    "cost_business_total": 150
+                },
+                "id": "F14"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "New York City"
+                ],
+                "time": [
+                    100
+                ],
+                "company": [
+                    "Intergalactic Airways"
+                ],
+                "flight_number": [
+                    "IA999"
+                ],
+                "cost": 5000,
+                "amenities": [
+                    "WiFi"
+                ],
+                "service": {
+                    "cost_check_bag_total": 50,
+                    "cost_business_total": 300
+                },
+                "id": "F21"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Las Vegas",
+                    "Mars"
+                ],
+                "time": [
+                    1,
+                    48,
+                    0
+                ],
+                "company": [
+                    "SpaceX"
+                ],
+                "flight_number": [
+                    "SX001",
+                    "SX002"
+                ],
+                "cost": 1000000,
+                "amenities": [
+                    "Lounge Access"
+                ],
+                "service": {
+                    "cost_check_bag_total": null,
+                    "cost_business_total": 100000
+                },
+                "id": "F4"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Miami",
+                    "New York City"
+                ],
+                "time": [
+                    5,
+                    1.5,
+                    3
+                ],
+                "company": [
+                    "Southwest Airlines",
+                    "Southwest Airlines"
+                ],
+                "flight_number": [
+                    "SW707",
+                    "SW808"
+                ],
+                "cost": 260,
+                "amenities": [
+                    "WiFi",
+                    "Carry on Baggage Allowance"
+                ],
+                "service": {
+                    "cost_check_bag_total": 65,
+                    "cost_business_total": 210
+                },
+                "id": "F18"
+            },
+            {
+                "path": [
+                    "Los Angeles",
+                    "Dallas",
+                    "New York City"
+                ],
+                "time": [
+                    3.5,
+                    7,
+                    3
+                ],
+                "company": [
+                    "American Airlines",
+                    "American Airlines"
+                ],
+                "flight_number": [
+                    "AA303",
+                    "AA404"
+                ],
+                "cost": 250,
+                "amenities": [
+                    "Meal Service",
+                    "WiFi"
+                ],
+                "service": {
+                    "cost_check_bag_total": 60,
+                    "cost_business_total": 200
+                },
+                "id": "F13"
+            }
+        ],
+        "hotel": [
+            {
+                "name": "Hyatt Regency NYC",
+                "room": [
+                    {
+                        "type": "King",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Suite (with kitchen)",
+                        "capacity": 4
+                    }
+                ],
+                "cost": [
+                    1800,
+                    1900
+                ],
+                "rating": 8,
+                "amenities": [
+                    "Gym",
+                    "High-Speed WiFi",
+                    "Ocean View",
+                    "Air Conditioning"
+                ],
+                "service": {
+                    "cost_breakfast_total": 130,
+                    "cost_parking_total": 230,
+                    "cost_barrier_free_total": 170
+                },
+                "id": "H19"
+            },
+            {
+                "name": "Mars Intergalactic Resort",
+                "room": [
+                    {
+                        "type": "Alien Pod",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Space Capsule",
+                        "capacity": 4
+                    }
+                ],
+                "cost": [
+                    500000,
+                    1000000
+                ],
+                "rating": 11,
+                "amenities": [
+                    "Mountain View"
+                ],
+                "service": {
+                    "cost_breakfast_total": null,
+                    "cost_parking_total": 0,
+                    "cost_barrier_free_total": null
+                },
+                "id": "H6"
+            },
+            {
+                "name": "Sheraton Times Square",
+                "room": [
+                    {
+                        "type": "King",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Queen",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Double",
+                        "capacity": 2
+                    }
+                ],
+                "cost": [
+                    1700,
+                    1800,
+                    2700
+                ],
+                "rating": 9,
+                "amenities": [
+                    "Gym",
+                    "High-Speed WiFi",
+                    "Mountain View",
+                    "Air Conditioning"
+                ],
+                "service": {
+                    "cost_breakfast_total": 110,
+                    "cost_parking_total": 220,
+                    "cost_barrier_free_total": 140
+                },
+                "id": "H4"
+            },
+            {
+                "name": "Hyatt Place NYC",
+                "room": [
+                    {
+                        "type": "King",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Queen",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Suite (with kitchen)",
+                        "capacity": 4
+                    }
+                ],
+                "cost": [
+                    1600,
+                    1700,
+                    2600
+                ],
+                "rating": 6,
+                "amenities": [
+                    "Gym",
+                    "High-Speed WiFi",
+                    "City View",
+                    "Air Conditioning"
+                ],
+                "service": {
+                    "cost_breakfast_total": 120,
+                    "cost_parking_total": 210,
+                    "cost_barrier_free_total": 160
+                },
+                "id": "H15"
+            },
+            {
+                "name": "Mystic Desert Oasis",
+                "room": [
+                    {
+                        "type": "Sand Dune Suite",
+                        "capacity": 3
+                    },
+                    {
+                        "type": "Mirage Room",
+                        "capacity": 5
+                    }
+                ],
+                "cost": [
+                    750,
+                    1200
+                ],
+                "rating": 3,
+                "amenities": [
+                    "Mountain View"
+                ],
+                "service": {
+                    "cost_breakfast_total": 250,
+                    "cost_parking_total": 150,
+                    "cost_barrier_free_total": null
+                },
+                "id": "H13"
+            },
+            {
+                "name": "Cloud Nine Skyscraper Suites",
+                "room": [
+                    {
+                        "type": "Sky Loft",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Heavenly Haven",
+                        "capacity": 1
+                    }
+                ],
+                "cost": [
+                    999,
+                    1999
+                ],
+                "rating": 9,
+                "amenities": [
+                    "City View"
+                ],
+                "service": {
+                    "cost_breakfast_total": 150,
+                    "cost_parking_total": 200,
+                    "cost_barrier_free_total": 50
+                },
+                "id": "H18"
+            },
+            {
+                "name": "Hyatt Place NYC Times Square",
+                "room": [
+                    {
+                        "type": "Double",
+                        "capacity": 4
+                    },
+                    {
+                        "type": "Queen",
+                        "capacity": 2
+                    }
+                ],
+                "cost": [
+                    1600,
+                    1400
+                ],
+                "rating": 9,
+                "amenities": [
+                    "High-Speed WiFi",
+                    "City View",
+                    "Gym"
+                ],
+                "service": {
+                    "cost_breakfast_total": 120,
+                    "cost_parking_total": null,
+                    "cost_barrier_free_total": 200
+                },
+                "id": "H2"
+            },
+            {
+                "name": "Underwater Atlantis Lodge",
+                "room": [
+                    {
+                        "type": "Bubble Suite",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Coral Reef King",
+                        "capacity": 3
+                    }
+                ],
+                "cost": [
+                    900,
+                    1600
+                ],
+                "rating": 2,
+                "amenities": [
+                    "Ocean View"
+                ],
+                "service": {
+                    "cost_breakfast_total": 200,
+                    "cost_parking_total": 300,
+                    "cost_barrier_free_total": 100
+                },
+                "id": "H10"
+            },
+            {
+                "name": "Hyatt Grand Central",
+                "room": [
+                    {
+                        "type": "King",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Suite (with kitchen)",
+                        "capacity": 4
+                    }
+                ],
+                "cost": [
+                    1900,
+                    2000
+                ],
+                "rating": 8,
+                "amenities": [
+                    "Gym",
+                    "High-Speed WiFi",
+                    "Mountain View",
+                    "Air Conditioning"
+                ],
+                "service": {
+                    "cost_breakfast_total": 140,
+                    "cost_parking_total": 240,
+                    "cost_barrier_free_total": 180
+                },
+                "id": "H20"
+            },
+            {
+                "name": "Marriott Downtown NYC",
+                "room": [
+                    {
+                        "type": "King",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Queen",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Suite (with kitchen)",
+                        "capacity": 4
+                    }
+                ],
+                "cost": [
+                    1500,
+                    1600,
+                    2500
+                ],
+                "rating": 8,
+                "amenities": [
+                    "Gym",
+                    "High-Speed WiFi",
+                    "City View",
+                    "Air Conditioning"
+                ],
+                "service": {
+                    "cost_breakfast_total": 100,
+                    "cost_parking_total": 200,
+                    "cost_barrier_free_total": 150
+                },
+                "id": "H17"
+            },
+            {
+                "name": "Ritz-Carlton Central Park",
+                "room": [
+                    {
+                        "type": "King",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Queen",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Double",
+                        "capacity": 2
+                    }
+                ],
+                "cost": [
+                    2500,
+                    2600,
+                    3500
+                ],
+                "rating": 10,
+                "amenities": [
+                    "Gym",
+                    "High-Speed WiFi",
+                    "Ocean View",
+                    "Air Conditioning"
+                ],
+                "service": {
+                    "cost_breakfast_total": 150,
+                    "cost_parking_total": 250,
+                    "cost_barrier_free_total": 190
+                },
+                "id": "H9"
+            },
+            {
+                "name": "Hyatt House New York/Chelsea",
+                "room": [
+                    {
+                        "type": "Double",
+                        "capacity": 4
+                    },
+                    {
+                        "type": "King",
+                        "capacity": 2
+                    }
+                ],
+                "cost": [
+                    1550,
+                    1450
+                ],
+                "rating": 7,
+                "amenities": [
+                    "City View",
+                    "Pets Allowed",
+                    "Washer and Dryer"
+                ],
+                "service": {
+                    "cost_breakfast_total": null,
+                    "cost_parking_total": 180,
+                    "cost_barrier_free_total": 150
+                },
+                "id": "H12"
+            },
+            {
+                "name": "Holiday Inn Manhattan",
+                "room": [
+                    {
+                        "type": "King",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Queen",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Double",
+                        "capacity": 2
+                    }
+                ],
+                "cost": [
+                    1400,
+                    1500,
+                    2400
+                ],
+                "rating": 6,
+                "amenities": [
+                    "Gym",
+                    "High-Speed WiFi",
+                    "City View",
+                    "Air Conditioning"
+                ],
+                "service": {
+                    "cost_breakfast_total": 90,
+                    "cost_parking_total": 190,
+                    "cost_barrier_free_total": 130
+                },
+                "id": "H5"
+            },
+            {
+                "name": "Four Seasons Downtown",
+                "room": [
+                    {
+                        "type": "King",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Queen",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Double",
+                        "capacity": 2
+                    }
+                ],
+                "cost": [
+                    2400,
+                    2500,
+                    3400
+                ],
+                "rating": 9,
+                "amenities": [
+                    "Gym",
+                    "High-Speed WiFi",
+                    "City View",
+                    "Air Conditioning"
+                ],
+                "service": {
+                    "cost_breakfast_total": 160,
+                    "cost_parking_total": 260,
+                    "cost_barrier_free_total": 200
+                },
+                "id": "H14"
+            },
+            {
+                "name": "Hyatt Regency New York",
+                "room": [
+                    {
+                        "type": "King",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Double",
+                        "capacity": 4
+                    },
+                    {
+                        "type": "Suite (with kitchen)",
+                        "capacity": 4
+                    }
+                ],
+                "cost": [
+                    1500,
+                    1700,
+                    2500
+                ],
+                "rating": 8,
+                "amenities": [
+                    "City View",
+                    "Gym",
+                    "High-Speed WiFi",
+                    "Air Conditioning"
+                ],
+                "service": {
+                    "cost_breakfast_total": 100,
+                    "cost_parking_total": 150,
+                    "cost_barrier_free_total": null
+                },
+                "id": "H11"
+            },
+            {
+                "name": "Hyatt Union Square",
+                "room": [
+                    {
+                        "type": "King",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Double",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Suite (with kitchen)",
+                        "capacity": 4
+                    }
+                ],
+                "cost": [
+                    1700,
+                    1800,
+                    2700
+                ],
+                "rating": 5,
+                "amenities": [
+                    "Gym",
+                    "High-Speed WiFi",
+                    "City View",
+                    "Air Conditioning"
+                ],
+                "service": {
+                    "cost_breakfast_total": 110,
+                    "cost_parking_total": 210,
+                    "cost_barrier_free_total": 160
+                },
+                "id": "H16"
+            },
+            {
+                "name": "Forest Whisper Inn",
+                "room": [
+                    {
+                        "type": "Treehouse",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Woodland Cabin",
+                        "capacity": 4
+                    }
+                ],
+                "cost": [
+                    300,
+                    500
+                ],
+                "rating": 5,
+                "amenities": [
+                    "Mountain View"
+                ],
+                "service": {
+                    "cost_breakfast_total": 100,
+                    "cost_parking_total": 50,
+                    "cost_barrier_free_total": null
+                },
+                "id": "H7"
+            },
+            {
+                "name": "Hyatt Herald Square",
+                "room": [
+                    {
+                        "type": "King",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Queen",
+                        "capacity": 2
+                    },
+                    {
+                        "type": "Suite (with kitchen)",
+                        "capacity": 4
+                    }
+                ],
+                "cost": [
+                    1800,
+                    1900,
+                    2800
+                ],
+                "rating": 8,
+                "amenities": [
+                    "Gym",
+                    "High-Speed WiFi",
+                    "Air Conditioning"
+                ],
+                "service": {
+                    "cost_breakfast_total": 120,
+                    "cost_parking_total": 220,
+                    "cost_barrier_free_total": 160
+                },
+                "id": "H21"
+            }
+        ]
+    },
+    "arguments": {
+        "restaurant": {
+            "city": "New York City",
+            "date": "December 11th"
+        },
+        "flight": {
+            "origin": "Los Angeles",
+            "destination": "New York City",
+            "date": "December 10th"
+        },
+        "hotel": {
+            "city": "New York City",
+            "date_start": "December 10th",
+            "date_end": "December 15th"
+        }
+    }
+}
